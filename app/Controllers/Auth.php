@@ -211,8 +211,8 @@ class Auth extends BaseController
         if (!$user) {
             $data['title'] = '404';
             $data['error_msg'] = 'KODE KEDALUWARSA, Silakan AKTIVASI ULANG!';
-            $data['content'] = view('errors/e404',$data);
-            return view('dashboard/header',$data);
+            $data['content'] = view('errors/e404', $data);
+            return view('dashboard/header', $data);
         } else {
             $toEmail  = $user['email'];
             $toName   = $user['nama'];
@@ -348,8 +348,8 @@ class Auth extends BaseController
         } else {
             $data['error_msg'] = 'KODE KADALUARSA ATAU TIDAK DITEMUKAN!';
             $data['title'] = '404';
-            $data['content'] = view('errors/e404',$data);
-            return view('dashboard/header',$data);
+            $data['content'] = view('errors/e404', $data);
+            return view('dashboard/header', $data);
         }
     }
 
