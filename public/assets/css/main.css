@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
+
+:root {
+    --dark-color: #202124;
+    --white-color: #fff;
+    --main-bg-color: #3b7ddd;
+    --border-radius: 0.375rem;
+}
+
+/* Bootstrap */
+.card, .btn {
+    border-radius: var(--border-radius);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height:10px;
+}
+::-webkit-scrollbar-track {
+    background: var(--white-color);
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: var(--border-radius);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--main-bg-color);
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a, div, button, label {
+    font-family: 'Poppins', sans-serif!important;
+}
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[name=oldpass],
+input[name=password],
+input[name=passconf] {
+    padding-right: 36px;
+}
+#eye_oldpass, #eye_password, #eye_passconf {
+    width:20px;
+    right:12px;
+    top:8px;
+}
+img, video, iframe {
+    border-radius: 0.25rem;
+}
+a {
+    text-decoration: none!important;
+}
+
+.img-style {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+    background-position-x: center;
+    object-fit: cover;
+}
+.wh-40 {
+    width: 40px!important;
+    height: 40px!important;
+}
+.wh-50 {
+    width: 50px!important;
+    height: 50px!important;
+}
+.wh-100 {
+    width: 100px!important;
+    height: 100px!important;
+}
+.wh-150 {
+    width: 150px!important;
+    height: 150px!important;
+}
+.fw-500 {font-weight: 500!important;}
+.fw-600 {font-weight: 600!important;}
+.fw-700 {font-weight: 700!important;}
+
+/* Sweet Alert */
+.swal2-popup {
+    font-size: .6rem!important;
+    margin-right: 12px;
+    padding: 12px!important;
+}
+.swal2-icon {
+    margin-top: 0px!important;
+    margin-bottom: 0px!important;
+    font-size: 8px!important;
+}
+.swal2-title {
+    padding: 0px!important;
+    margin-top: 12px!important;
+    color: var(--dark-color)!important;
+    font-weight: 500;
+}
+.swal2-actions {
+    margin:12px 0 0 0!important;
+}
+.swal2-styled.swal2-confirm {
+    background-color: var(--main-bg-color)!important;
+}
+@media (max-width: 768px) {
+    .swal2-popup {
+        width: 100%!important;
+        margin-right: auto;
+    }
+}
+
+/* Preloader */
+.loader-bg {
+    position: fixed;
+    z-index: 999999;
+    background: var(--white-color);
+    width: 100%;
+    height: 100%;
+}
+.loader-p {
+    border: 0 solid transparent;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: calc(50vh - 75px);
+    left: calc(50vw - 75px);
+}
+.loader-p:before,
+.loader-p:after {
+    content: '';
+    border: 1em solid var(--main-bg-color);
+    border-radius: 50%;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loader 2s linear infinite;
+    opacity: 0;
+}
+.loader-p:before {
+    animation-delay: 0.5s;
+}
+@keyframes loader {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
