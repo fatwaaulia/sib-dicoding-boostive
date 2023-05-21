@@ -20,7 +20,7 @@
                         <tr>
                             <th>No.</th>
                             <th>Kategori</th>
-                            <th>Nama</th>
+                            <th>Nama Kegiatan</th>
                             <th>Kontributor</th>
                             <th>Opsi</th>
                         </tr>
@@ -41,12 +41,7 @@
                                     <i class="fa-solid fa-up-right-from-square ms-1"></i>
                                 </a>
                             </td>
-                            <td>
-                                <?php
-                                $kategori_produktif = model('Users')->where('id', $v['id_kontributor'])->first();
-                                echo $kategori_produktif['nama'];
-                                ?>
-                            </td>
+                            <td><?= $v['nama_kontributor'] ?></td>
                             <td>
                                 <a href="<?= $base_route . '/edit/' . model('Env')->encode($v['id']) ?>">
                                     <i class="fa-regular fa-pen-to-square fa-lg me-2"></i>
@@ -72,12 +67,7 @@
                                                     <tr>
                                                         <td class="fw-500">Kontributor</td>
                                                         <td class="fw-500"> :&nbsp;</td>
-                                                        <td> 
-                                                            <?php
-                                                            $kategori_produktif = model('Users')->where('id', $v['id_kontributor'])->first();
-                                                            echo $kategori_produktif['nama'];
-                                                            ?> 
-                                                        </td>
+                                                        <td><?= $v['nama_kontributor'] ?></td>
                                                     </tr>
                                                 </table>
                                             </div>

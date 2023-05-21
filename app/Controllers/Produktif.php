@@ -15,7 +15,11 @@ class Produktif extends BaseController
 
     public function index()
     {
-        $data['data'] = $this->base_model->findAll();
+        $where = [
+            'accepted_at !=' => null,
+            'status'   => 'Diterima'
+        ];
+        $data['data'] = $this->base_model->where($where)->findAll();
         $data['base_name'] = $this->base_name;
         $data['base_route'] = $this->base_route;
         $data['title'] = 'Data ' . ucwords(str_replace('_', ' ', $this->base_name));
@@ -47,11 +51,14 @@ class Produktif extends BaseController
             return redirect()->back()->withInput();
         }else {
             $field = [
-                'id_kontributor'    => $this->user_session['id'],
+                'nama_kontributor'  => $this->user_session['nama'],
+                'email_kontributor' => $this->user_session['email'],
                 'id_kategori'       => $this->request->getVar('id_kategori', $this->filter),
                 'nama'              => trim($this->request->getVar('nama', $this->filter)),
                 'tautan'            => trim($this->request->getVar('tautan', $this->filter)),
                 'deskripsi'         => $this->request->getVar('deskripsi', $this->filter),
+                'status'            => 'Diterima',
+                'accepted_at'       => date('Y-m-d H:i:s'),
             ];
             
             // dd($field);

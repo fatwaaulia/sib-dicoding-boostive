@@ -28,6 +28,9 @@
     background: var(--main-bg-color);
 }
 
+body {
+    background-color:#f5f7fb!important;
+}
 h1, h2, h3, h4, h5, h6, p, span, a, div, button, label {
     font-family: 'Poppins', sans-serif!important;
 }

@@ -14,6 +14,15 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="mb-3">
+                                    <label class="form-label">Nama Kontributor</label>
+                                    <input type="text" class="form-control" value="<?= $data['nama_kontributor'] ?>" disabled>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Email Kontributor</label>
+                                    <input type="email" class="form-control" value="<?= $data['email_kontributor'] ?>" disabled>
+                                </div>
+                                <hr>
+                                <div class="mb-3">
                                     <label for="id_kategori" class="form-label">Kategori</label>
                                     <select class="form-select <?= validation_show_error('id_kategori') ? 'is-invalid' : '' ?>" id="id_kategori" name="id_kategori">
                                         <option value="">~Pilih</option>
@@ -42,7 +51,7 @@
                                     </div>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="nama" class="form-label">Nama</label>
+                                    <label for="nama" class="form-label">Nama Kegiatan</label>
                                     <input type="text" class="form-control <?= validation_show_error('nama') ? 'is-invalid' : '' ?>" id="nama" name="nama" value="<?= old('nama') ?? $data['nama'] ?>" placeholder="Masukkan nama">
                                     <div class="invalid-feedback">
                                         <?= validation_show_error('nama') ?>

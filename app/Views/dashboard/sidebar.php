@@ -29,18 +29,20 @@ $user = model('Users')->where('id', $user_session['id'])->first();
 					],
 					[
 						'text'    => 'DATA PRODUKTIF',
-						'role'   => [1, 2, 3]
+						'role'   => [1]
 					],
 					[
-						'text'    => 'Daftar Produktif',
+						'text'    => 'Kontribusi',
+						'url'     => 'pengajuan-kontribusi',
+						'icon'    => 'fa-solid fa-paper-plane',
+						'role'    => [1]
+					],
+					[
+						'text'    => 'Data Produktif',
 						'url'     => 'data-produktif',
 						'icon'    => 'fa-solid fa-up-right-from-square',
 						'role'    => [1]
 					],
-					// ADMIN
-					// == sidebar
-					// STARTED
-					// == sidebar
 					// SEMUA ROLE
 					[
 						'text'    => 'AKUN SAYA',

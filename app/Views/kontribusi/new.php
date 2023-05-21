@@ -59,7 +59,7 @@
                                 <!--  -->
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary mt-3 float-end">Tambahkan</button>
+                        <button type="submit" class="btn btn-primary mt-3 px-5 float-end">Kirim</button>
                     </form>
                 </div>
             </div>

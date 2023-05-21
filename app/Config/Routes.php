@@ -40,6 +40,9 @@ $routes->get('produktif', 'Landingpage::produktif');
 $routes->get('produktif/(:any)', 'Landingpage::detailTautanProduktif');
 $routes->get('tentang-kami', 'Landingpage::tentangKami');
 
+$routes->get('formulir-kontribusi', 'Kontribusi::new');
+$routes->post('formulir-kontribusi/kirim', 'Kontribusi::create');
+
 // == AUTENTIKASI ==
 // Login
 $routes->get('login', 'Auth::login');
@@ -75,6 +78,10 @@ $routes->group('users', ['filter' => 'Superadmin'], static function ($routes) {
     $routes->post('update/(:segment)', 'Users::update/$1');
     $routes->post('delete/(:segment)', 'Users::delete/$1');
     $routes->post('delete-image/(:segment)', 'Users::deleteImg/$1');
+});
+$routes->group('pengajuan-kontribusi', ['filter' => 'Superadmin'], static function ($routes) {
+    $routes->get('/', 'Kontribusi::index');
+    $routes->post('update/(:segment)', 'Kontribusi::update/$1');
 });
 $routes->group('data-produktif', ['filter' => 'Superadmin'], static function ($routes) {
     $routes->get('/', 'Produktif::index');

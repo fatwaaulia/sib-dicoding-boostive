@@ -17,6 +17,12 @@
 
     <!-- My Style -->
     <link rel="stylesheet" href="<?= base_url() . 'assets/css/main.css' ?>">
+    <style>
+    section {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    </style>
 </head>
 
 <body style="padding-top:61.44px">
@@ -104,8 +110,7 @@
     <?= $content ?? '' ?>
     <!-- Akhir Content -->
 
-    <hr>
-    <footer class="text-center py-3">
+    <footer class="text-center py-4 bg-white" style="border-top:1px solid #ddd">
         <img src="<?= base_url('assets/img/logo.png') ?>" class="mb-3" style="width:150px" alt="boostive.png">
         <div class="text-secondary">Mengenal Tools produktif melalui kami.</div>
     </footer>

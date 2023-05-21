@@ -119,7 +119,7 @@ class Users extends BaseController
         $this->base_model->delete($id);
         return redirect()->to($this->base_route)
         ->with('message',
-            "<script>
+        "<script>
             Swal.fire({
             position: 'top-end',
             icon: 'success',
@@ -143,7 +143,7 @@ class Users extends BaseController
         $this->base_model->update($id, ['img' => '']);
         return redirect()->to($this->base_route . '/edit/' . $id)
         ->with('message',
-            "<script>
+        "<script>
             Swal.fire({
             position: 'top-end',
             icon: 'success',
@@ -212,7 +212,7 @@ class Users extends BaseController
             $this->base_model->update($id, $field);
             return redirect()->to($this->base_route)
             ->with('message',
-                "<script>
+            "<script>
                 Swal.fire({
                 position: 'top-end',
                 icon: 'success',
