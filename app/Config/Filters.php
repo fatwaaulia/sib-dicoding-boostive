@@ -23,6 +23,7 @@ class Filters extends BaseConfig
         'secureheaders' => SecureHeaders::class,
         'Auth'          => \App\Filters\Auth::class,
         'Superadmin'    => \App\Filters\Superadmin::class,
+        'Kontributor'   => \App\Filters\Kontributor::class,
     ];
 
     /**
