@@ -61,7 +61,7 @@
     <nav class="navbar navbar-expand-lg bg-white fixed-top" style="box-shadow:0px 3px 16px 0px rgb(0 0 0 / 10%)">
         <div class="container">
             <a class="navbar-brand" href="<?= base_url() ?>">
-                <img src="<?= base_url('assets/img/boostive.png') ?>" style="width:150px" alt="boostive.png">
+                <img src="<?= base_url('assets/img/logo.png') ?>" style="width:150px" alt="boostive.png">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -74,14 +74,16 @@
                             Produktif
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="<?= base_url() . 'produktif?kategori=TK' ?>">TK</a></li>
-                            <li><a class="dropdown-item" href="<?= base_url() . 'produktif?kategori=SD' ?>">SD</a></li>
-                            <li><a class="dropdown-item" href="<?= base_url() . 'produktif?kategori=SMP' ?>">SMP</a></li>
-                            <li><a class="dropdown-item" href="<?= base_url() . 'produktif?kategori=SMA' ?>">SMA</a></li>
-                            <li><a class="dropdown-item" href="<?= base_url() . 'produktif?kategori=Orang+Tua' ?>">Orang Tua</a></li>
-                            <li><a class="dropdown-item" href="<?= base_url() . 'produktif?kategori=Semua+Usia' ?>">Semua Usia</a></li>
+                        <?php
+                        $kategori_produktif = model('KategoriProduktif')->findAll();
+                        foreach ($kategori_produktif as $v) :
+                        ?>
+                            <li><a class="dropdown-item" href="<?= base_url() . 'produktif?kategori=' . $v['nama'] ?>"><?= $v['nama'] ?></a></li>
+                        <?php
+                        endforeach
+                        ?>
                         </ul>
-                        </li>
+                    </li>
                     <a class="nav-link <?= ($segment_1 == 'tentang-kami') ? 'active' : '' ?>" href="<?= base_url('tentang-kami') ?>">Tentang Kami</a>
                 </div>
                 <div class="navbar-nav">
@@ -104,7 +106,7 @@
 
     <hr>
     <footer class="text-center py-3">
-        <img src="<?= base_url('assets/img/boostive.png') ?>" class="mb-3" style="width:150px" alt="boostive.png">
+        <img src="<?= base_url('assets/img/logo.png') ?>" class="mb-3" style="width:150px" alt="boostive.png">
         <div class="text-secondary">Mengenal Tools produktif melalui kami.</div>
     </footer>
 

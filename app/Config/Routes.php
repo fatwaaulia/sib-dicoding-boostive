@@ -18,10 +18,7 @@ $routes->set404Override(
     function() {
         $data['title'] = '404';
         $data['content'] = view('errors/e404');
-        if (session()->isLogin) {
-            $data['sidebar'] = view('dashboard/sidebar',$data);
-        }
-        return view('dashboard/header',$data);
+        return view('landingpage/header', $data);
     }
 );
 // The Auto Routing (Legacy) is very dangerous. It is easy to create vulnerable apps

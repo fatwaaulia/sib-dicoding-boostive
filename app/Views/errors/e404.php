@@ -1,4 +1,4 @@
-<section style="margin-top:32px">
+<section style="margin:32px 0">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2">
