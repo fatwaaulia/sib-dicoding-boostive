@@ -18,14 +18,24 @@ $user = model('Users')->where('id', $user_session['id'])->first();
 						'text'    => 'Dashboard',
 						'url'     => 'dashboard',
 						'icon'    => 'fa-solid fa-house',
-						'role'    => [1, 2, 3],
+						'role'    => [1, 2, 3]
 					],
 					// SUPERADMIN
 					[
 						'text'    => 'Kelola Pengguna',
 						'url'     => 'users',
 						'icon'    => 'fa-solid fa-user-group',
-						'role'    => [1],
+						'role'    => [1]
+					],
+					[
+						'text'    => 'DATA PRODUKTIF',
+						'role'   => [1, 2, 3]
+					],
+					[
+						'text'    => 'Daftar Produktif',
+						'url'     => 'data-produktif',
+						'icon'    => 'fa-solid fa-up-right-from-square',
+						'role'    => [1]
 					],
 					// ADMIN
 					// == sidebar
@@ -34,19 +44,19 @@ $user = model('Users')->where('id', $user_session['id'])->first();
 					// SEMUA ROLE
 					[
 						'text'    => 'AKUN SAYA',
-						'role'   => [1, 2, 3],
+						'role'   => [1, 2, 3]
 					],
 					[
 						'text'    => 'Profil',
 						'url'     => 'profile',
 						'icon'    => 'fa-solid fa-user',
-						'role'    => [1, 2, 3],
+						'role'    => [1, 2, 3]
 					],
 					[
 						'text'    => 'Keluar',
 						'url'     => 'logout',
 						'icon'    => 'fa-solid fa-arrow-right-from-bracket',
-						'role'    => [1, 2, 3],
+						'role'    => [1, 2, 3]
 					],
 
 				];

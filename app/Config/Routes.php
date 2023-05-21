@@ -76,6 +76,14 @@ $routes->group('users', ['filter' => 'Superadmin'], static function ($routes) {
     $routes->post('delete/(:segment)', 'Users::delete/$1');
     $routes->post('delete-image/(:segment)', 'Users::deleteImg/$1');
 });
+$routes->group('data-produktif', ['filter' => 'Superadmin'], static function ($routes) {
+    $routes->get('/', 'Produktif::index');
+    $routes->get('new', 'Produktif::new');
+    $routes->post('create', 'Produktif::create');
+    $routes->get('edit/(:segment)', 'Produktif::edit/$1');
+    $routes->post('update/(:segment)', 'Produktif::update/$1');
+    $routes->post('delete/(:segment)', 'Produktif::delete/$1');
+});
 
 /*
  * --------------------------------------------------------------------

@@ -17,7 +17,7 @@
                                     <div class="wh-150 position-relative">
                                     <?php
                                     if ($data['img']) {
-                                        $img = base_url('assets/img/'.$base_name.'/'.$data['img']);
+                                        $img = base_url('assets/img/' . $base_name . '/' . $data['img']);
                                     } else {
                                         $img = base_url('assets/img/user-default.png');
                                     }
