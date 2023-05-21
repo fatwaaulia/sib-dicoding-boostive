@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class Env extends Model
 {
     public function webName() {
-        return 'Web App';
+        return 'Boostive - Mengenal Tools Produktif';
     }
 
    public function encode($id = null)
