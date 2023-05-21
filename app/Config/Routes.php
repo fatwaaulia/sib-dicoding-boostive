@@ -38,7 +38,10 @@ $routes->set404Override(
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Auth::login');
+$routes->get('/', 'Landingpage::beranda');
+$routes->get('produktif', 'Landingpage::produktif');
+$routes->get('produktif/(:any)', 'Landingpage::detailTautanProduktif');
+$routes->get('tentang-kami', 'Landingpage::tentangKami');
 
 // == AUTENTIKASI ==
 // Login
