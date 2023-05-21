@@ -48,7 +48,7 @@
                             <td><?= $v['alamat'] ?></td>
                             <td><?= $v['telp'] ?></td>
                             <td><?= $v['email'] ?></td>
-                            <td><?= $v['activated_at'] != null ? date('d-m-Y H:i:s', strtotime($v['activated_at'])) : 'Belum aktivasi' ?></td>
+                            <td><?= $v['activated_at'] != null ? date('d-m-Y H:i:s', strtotime($v['activated_at'])) : 'Belum diaktivasi' ?></td>
                             <td>
                                 <?php if ($v['id_role'] != 1) : ?>
                                 <a href="<?= $base_route . '/edit/' . model('Env')->encode($v['id']) ?>">
