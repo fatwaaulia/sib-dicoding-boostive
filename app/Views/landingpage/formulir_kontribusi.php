@@ -1,5 +1,37 @@
+<link rel="stylesheet" href="<?= base_url() . 'assets/css/bootstrap.min.css' ?>">
+<link rel="stylesheet" href="<?= base_url() . 'assets/css/main.css' ?>">
+<script src="<?= base_url() . 'assets/js/jquery.min.js' ?>"></script>
+<script src="<?= base_url() . 'assets/js/sweetalert2.js' ?>"></script>
+
+    <!-- loader -->
+    <div class="loader-bg position-absolute top-50 start-50 translate-middle">
+        <div class="loader-p"></div>
+    </div>
+    <script>
+    setTimeout(() => {
+        $('.loader-bg').fadeToggle();
+    });
+    </script>
+    <!-- Akhir Loader -->
+
+    <!-- Pesan -->
+    <?= session()->getFlashdata('message') ?>
+    <?php if(session()->getFlashdata('error')) : ?>
+        <script>
+            Swal.fire({
+            position: 'top-end',
+            icon: 'error',
+            title: '<?= session()->getFlashdata('error') ?>',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            })
+        </script>
+    <?php endif; ?>
+    <!-- Akhir Pesan -->
+
 <section>
-<div class="container">
+<div class="container py-5">
     <div class="row">
         <div class="offset-xxl-3 col-xxl-6 col-lg-4 col-md-6">
             <div class="card">
@@ -75,6 +107,8 @@
     </div>
 </div>
 </section>
+
+<script src="<?= base_url() . 'assets/js/bootstrap.bundle.min.js' ?>"></script>
 
 <!-- Dselect -->
 <link rel="stylesheet" href="<?= base_url() . 'assets/css/dselect.css' ?>">

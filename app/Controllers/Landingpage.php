@@ -9,6 +9,7 @@ class Landingpage extends BaseController
     public function beranda()
     {   
         $data['content'] = view('landingpage/beranda');
+        $data['navbar_footer'] = view('landingpage/navbar_footer', $data);
         return view('landingpage/header', $data);
     }
 
@@ -17,6 +18,7 @@ class Landingpage extends BaseController
         $data['title'] = 'Menu';
         
         $data['content'] = view('landingpage/produktif', $data);
+        $data['navbar_footer'] = view('landingpage/navbar_footer', $data);
         return view('landingpage/header', $data);
     }
 
@@ -25,6 +27,7 @@ class Landingpage extends BaseController
         $data['title'] = 'Tentang Kami';
         
         $data['content'] = view('landingpage/tentang_kami', $data);
+        $data['navbar_footer'] = view('landingpage/navbar_footer', $data);
         return view('landingpage/header', $data);
     }
 
@@ -33,6 +36,7 @@ class Landingpage extends BaseController
         $data['title'] = 'Tentang Kami';
         
         $data['content'] = view('landingpage/detail_tautan_produktif', $data);
+        $data['navbar_footer'] = view('landingpage/navbar_footer', $data);
         return view('landingpage/header', $data);
     }
 }

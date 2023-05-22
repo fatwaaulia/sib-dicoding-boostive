@@ -35,6 +35,7 @@ class Kontribusi extends BaseController
         $data['title'] = 'Formulir Kontribusi';
         
         $data['content'] = view('landingpage/formulir_kontribusi', $data);
+        // $data['navbar_footer'] = view('landingpage/navbar_footer', $data);
         return view('landingpage/header', $data);
     }
 
