@@ -45,14 +45,14 @@
                         <label class="fw-600 mb-3">Kontributor</label>
                         <div class="mb-3">
                             <label for="nama_kontributor" class="form-label">Nama Anda</label>
-                            <input type="text" class="form-control <?= validation_show_error('nama_kontributor') ? 'is-invalid' : '' ?>" id="nama_kontributor" name="nama_kontributor" value="<?= old('nama_kontributor') ?>" placeholder="Masukkan nama anda">
+                            <input type="text" class="form-control <?= validation_show_error('nama_kontributor') ? 'is-invalid' : '' ?>" id="nama_kontributor" name="nama_kontributor" value="<?= old('nama_kontributor') ?>" placeholder="Masukkan nama anda" autocomplete="off">
                             <div class="invalid-feedback">
                                 <?= validation_show_error('nama_kontributor') ?>
                             </div>
                         </div>
                         <div class="mb-3">
                             <label for="email_kontributor" class="form-label">Email</label>
-                            <input type="text" class="form-control <?= validation_show_error('email_kontributor') ? 'is-invalid' : '' ?>" id="email_kontributor" name="email_kontributor" value="<?= old('email_kontributor') ?>" placeholder="name@gmail.com">
+                            <input type="text" class="form-control <?= validation_show_error('email_kontributor') ? 'is-invalid' : '' ?>" id="email_kontributor" name="email_kontributor" value="<?= old('email_kontributor') ?>" placeholder="name@gmail.com" autocomplete="off">
                             <div class="invalid-feedback">
                                 <?= validation_show_error('email_kontributor') ?>
                             </div>
@@ -80,21 +80,21 @@
                         </div>
                         <div class="mb-3">
                             <label for="nama" class="form-label">Nama Kegiatan</label>
-                            <input type="text" class="form-control <?= validation_show_error('nama') ? 'is-invalid' : '' ?>" id="nama" name="nama" value="<?= old('nama') ?>" placeholder="Masukkan nama">
+                            <input type="text" class="form-control <?= validation_show_error('nama') ? 'is-invalid' : '' ?>" id="nama" name="nama" value="<?= old('nama') ?>" placeholder="Masukkan nama kegiatan" autocomplete="off">
                             <div class="invalid-feedback">
                                 <?= validation_show_error('nama') ?>
                             </div>
                         </div>
                         <div class="mb-3">
                             <label for="tautan" class="form-label">Tautan</label>
-                            <input type="text" class="form-control <?= validation_show_error('tautan') ? 'is-invalid' : '' ?>" id="tautan" name="tautan" value="<?= old('tautan') ?>" placeholder="https://example.com/">
+                            <input type="text" class="form-control <?= validation_show_error('tautan') ? 'is-invalid' : '' ?>" id="tautan" name="tautan" value="<?= old('tautan') ?>" placeholder="https://example.com/" autocomplete="off">
                             <div class="invalid-feedback">
                                 <?= validation_show_error('tautan') ?>
                             </div>
                         </div>
                         <div class="mb-3">
                             <label for="deskripsi" class="form-label">Deskripsi</label>
-                            <textarea class="form-control <?= validation_show_error('deskripsi') ? 'is-invalid' : '' ?>" id="deskripsi" name="deskripsi" rows="5" placeholder="Masukkan deskripsi"><?= old('deskripsi') ?></textarea>
+                            <textarea class="form-control <?= validation_show_error('deskripsi') ? 'is-invalid' : '' ?>" id="deskripsi" name="deskripsi" rows="5" placeholder="Masukkan deskripsi" autocomplete="off"><?= old('deskripsi') ?></textarea>
                             <div class="invalid-feedback">
                                 <?= validation_show_error('deskripsi') ?>
                             </div>
