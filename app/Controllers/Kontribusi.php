@@ -48,32 +48,51 @@ class Kontribusi extends BaseController
             'nama'              => "required|is_unique[$this->base_name_2.nama]",
             'tautan'            => 'required',
             'deskripsi'         => 'required',
+            'input_penjumlahan'         => 'required',
         ];
         if (! $this->validate($rules)) {
             return redirect()->back()->withInput();
         }else {
-            $field = [
-                'nama_kontributor'  => $this->request->getVar('nama_kontributor', $this->filter),
-                'email_kontributor' => $this->request->getVar('email_kontributor', $this->filter),
-                'id_kategori'       => $this->request->getVar('id_kategori', $this->filter),
-                'nama'              => trim($this->request->getVar('nama', $this->filter)),
-                'tautan'            => trim($this->request->getVar('tautan', $this->filter)),
-                'deskripsi'         => $this->request->getVar('deskripsi', $this->filter),
-                'status'            => 'Diproses',
-            ];
-            
-            // dd($field);
-            $this->base_model->insert($field);
-            return redirect()->to($this->base_route)
-            ->with('message',
-            "<script>
-                Swal.fire({
-                position: 'top-end',
-                icon: 'success',
-                title: 'Formulir berhasil dikirim',
-                showConfirmButton: true,
-                })
-            </script>");
+            $angka_pertama = $this->request->getVar('angka_pertama', $this->filter);
+            $angka_kedua = $this->request->getVar('angka_kedua', $this->filter);
+            $input_penjumlahan = $this->request->getVar('input_penjumlahan', $this->filter);
+            $jawaban_penjumlahan = (int)$angka_pertama + (int)$angka_kedua;
+
+            if ((int)$input_penjumlahan !== $jawaban_penjumlahan) {
+                return redirect()->to($this->base_route)
+                ->with('message',
+                "<script>
+                    Swal.fire({
+                    position: 'top-end',
+                    icon: 'error',
+                    title: 'Jawaban penjumlahan kamu kurang tepat!',
+                    showConfirmButton: true,
+                    })
+                </script>");
+            } else {
+                $field = [
+                    'nama_kontributor'  => $this->request->getVar('nama_kontributor', $this->filter),
+                    'email_kontributor' => $this->request->getVar('email_kontributor', $this->filter),
+                    'id_kategori'       => $this->request->getVar('id_kategori', $this->filter),
+                    'nama'              => trim($this->request->getVar('nama', $this->filter)),
+                    'tautan'            => trim($this->request->getVar('tautan', $this->filter)),
+                    'deskripsi'         => $this->request->getVar('deskripsi', $this->filter),
+                    'status'            => 'Diproses',
+                ];
+                
+                // dd($field);
+                $this->base_model->insert($field);
+                return redirect()->to($this->base_route)
+                ->with('message',
+                "<script>
+                    Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Formulir berhasil dikirim',
+                    showConfirmButton: true,
+                    })
+                </script>");
+            }
         }
     }
 

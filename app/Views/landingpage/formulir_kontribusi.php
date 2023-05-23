@@ -99,6 +99,20 @@
                                 <?= validation_show_error('deskripsi') ?>
                             </div>
                         </div>
+                        <div class="mb-3">
+                        <?php
+                        $angka_pertama = random_string('numeric', 1);
+                        $angka_kedua = random_string('numeric', 1);
+                        $penjumlahan = $angka_pertama . ' + ' . $angka_kedua;
+                        ?>
+                        <label for="input_penjumlahan" class="form-label fw-600"><?= $penjumlahan ?></label>
+                        <input type="hidden" name="angka_pertama" value="<?= $angka_pertama ?>">
+                        <input type="hidden" name="angka_kedua" value="<?= $angka_kedua ?>">
+                        <input type="number" class="form-control <?= validation_show_error('input_penjumlahan') ? 'is-invalid' : '' ?>" name="input_penjumlahan" value="<?= old('input_penjumlahan') ?>" placeholder="Hasil dari <?= $penjumlahan ?>" autocomplete="off">
+                        <div class="invalid-feedback">
+                            <?= validation_show_error('input_penjumlahan') ?>
+                        </div>
+                        </div>
                         <button type="submit" class="btn btn-primary mt-3 px-5 float-end">Kirim</button>
                     </form>
                 </div>
