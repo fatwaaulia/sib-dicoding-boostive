@@ -15,12 +15,7 @@
                         <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
                     </a>
                     <ul class="p-2 bg-base-100">
-                        <?php
-                        $kategori_produktif = model('KategoriProduktif')->findAll();
-                        foreach ($kategori_produktif as $v) :
-                        ?>
-                        <li><a href="<?= base_url('produktif?kategori=') . $v['nama'] ?>" class="text-m"><?= $v['nama'] ?></a></li>
-                        <?php endforeach; ?>
+                        <li><a href="<?= base_url('produktif?kategori=Semua Usia') ?>" class="text-m">Semua Usia</a></li>
             </ul>
         </li>
         <li><a href="<?= base_url('tentang-kami') ?>" class="text-m">Tentang Kami</a></li>
@@ -36,12 +31,7 @@ peer-checked:translate-x-0 transition duration-500 sm:w-auto sm:static sm:hidden
         <div class="dropdown" id="dropdown">
             <label for="dropdown" tabindex="0">Produktif</label>
                 <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
-                    <?php
-                    $kategori_produktif = model('KategoriProduktif')->findAll();
-                    foreach ($kategori_produktif as $v) :
-                    ?>
-                    <li><a href="<?= base_url('produktif?kategori=') . $v['nama'] ?>"><?= $v['nama'] ?></a></li>
-                    <?php endforeach; ?>
+                    <li><a href="<?= base_url('produktif?kategori=Semua Usia') ?>">Semua Usia</a></li>
                  </ul>
         </div>
         <li><a href="<?= base_url('tentang-kami') ?>">Tentang Kami</a></li>
