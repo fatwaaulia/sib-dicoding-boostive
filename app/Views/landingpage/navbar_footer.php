@@ -47,5 +47,10 @@ peer-checked:translate-x-0 transition duration-500 sm:w-auto sm:static sm:hidden
 
 
 <!-- footer disini -->
-<h1>Footer</h1>
+<footer class="footer footer-center p-4 bg-base-100 text-base-content">
+    <div>
+        <img src="<?= base_url('assets/img/logo.png') ?>" class="w-40 sm:w-32 md:w-36" alt="logo.png">
+        <p class="text-gray-600">Mengenal Tools Produktif Melalui Kami</p>
+    </div>
+</footer>
 <!-- akhir footer -->
