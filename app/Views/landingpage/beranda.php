@@ -8,7 +8,7 @@
             <div class="mb-4 lg:mb-0">
                 <img
                   src="https://mdbootstrap.com/img/new/ecommerce/vertical/028.jpg"
-                  class="w-full rounded-lg shadow-lg"
+                  class="w-fit rounded-lg shadow-lg"
                   alt=""
                 />
             </div>
