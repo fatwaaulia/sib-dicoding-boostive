@@ -13,11 +13,7 @@
                         Kontribusi Masuk
                     </p>
                     <?php
-                    $where = [
-                        'accepted_at' => null,
-                        'status !='   => 'Diterima'
-                    ];
-                    $jumlah_kontribusi = model('Produktif')->where($where)->findAll();
+                    $jumlah_kontribusi = model('FormulirKontribusi')->where('status', 'Diproses')->findAll();
                     ?>
                     <h3 class="mb-0"><?= count($jumlah_kontribusi) ?></h3>
                 </div>
@@ -31,11 +27,7 @@
                         Data Produktif
                     </p>
                     <?php
-                    $where = [
-                        'accepted_at !=' => null,
-                        'status'   => 'Diterima'
-                    ];
-                    $jumlah_produktif = model('Produktif')->where($where)->findAll();
+                    $jumlah_produktif = model('Produktif')->findAll();
                     ?>
                     <h3 class="mb-0"><?= count($jumlah_produktif) ?></h3>
                 </div>
