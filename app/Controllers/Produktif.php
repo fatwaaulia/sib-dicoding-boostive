@@ -15,11 +15,7 @@ class Produktif extends BaseController
 
     public function index()
     {
-        $where = [
-            'accepted_at !=' => null,
-            'status'   => 'Diterima'
-        ];
-        $data['data'] = $this->base_model->where($where)->findAll();
+        $data['data'] = $this->base_model->findAll();
         $data['base_name'] = $this->base_name;
         $data['base_route'] = $this->base_route;
         $data['title'] = 'Data ' . ucwords(str_replace('_', ' ', $this->base_name));
@@ -57,8 +53,6 @@ class Produktif extends BaseController
                 'nama'              => trim($this->request->getVar('nama', $this->filter)),
                 'tautan'            => trim($this->request->getVar('tautan', $this->filter)),
                 'deskripsi'         => $this->request->getVar('deskripsi', $this->filter),
-                'status'            => 'Diterima',
-                'accepted_at'       => date('Y-m-d H:i:s'),
             ];
             
             // dd($field);

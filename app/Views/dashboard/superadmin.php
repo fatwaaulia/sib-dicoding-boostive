@@ -13,7 +13,7 @@
                         Kontribusi Masuk
                     </p>
                     <?php
-                    $jumlah_kontribusi = model('FormulirKontribusi')->where('status', 'Diproses')->findAll();
+                    $jumlah_kontribusi = model('Kontribusi')->where('status', 'Diproses')->findAll();
                     ?>
                     <h3 class="mb-0"><?= count($jumlah_kontribusi) ?></h3>
                 </div>

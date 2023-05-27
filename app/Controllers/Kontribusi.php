@@ -9,18 +9,14 @@ class Kontribusi extends BaseController
     public function __construct()
     {
         $this->base_name = 'kontribusi';
-        $this->base_name_2 = 'produktif';
-        $this->base_model = model('Produktif');
+        $this->base_model = model('Kontribusi');
         $this->env_model = model('Env');
+        $this->produktif_model = model('Produktif');
     }
 
     public function index()
     {
-        $where = [
-            'accepted_at' => null,
-            'status !='   => 'Diterima'
-        ];
-        $data['data'] = $this->base_model->where($where)->findAll();
+        $data['data'] = $this->base_model->findAll();
         $data['base_name'] = $this->base_name;
         $data['base_route'] = $this->base_route;
         $data['title'] = 'Data Kontribusi';
@@ -35,7 +31,6 @@ class Kontribusi extends BaseController
         $data['title'] = 'Formulir Kontribusi';
         
         $data['content'] = view('landingpage/formulir_kontribusi', $data);
-        // $data['navbar_footer'] = view('landingpage/navbar_footer', $data);
         return view('landingpage/header', $data);
     }
 
@@ -45,10 +40,10 @@ class Kontribusi extends BaseController
             'nama_kontributor'  => 'required',
             'email_kontributor' => 'required|valid_email',
             'id_kategori'       => 'required',
-            'nama'              => "required|is_unique[$this->base_name_2.nama]",
+            'nama'              => "required|is_unique[$this->base_name.nama]",
             'tautan'            => 'required',
             'deskripsi'         => 'required',
-            'input_penjumlahan'         => 'required',
+            'input_penjumlahan' => 'required',
         ];
         if (! $this->validate($rules)) {
             return redirect()->back()->withInput();
@@ -88,7 +83,7 @@ class Kontribusi extends BaseController
                     Swal.fire({
                     position: 'top-end',
                     icon: 'success',
-                    title: 'Formulir berhasil dikirim',
+                    title: 'Terimakasih, kontribusi Anda sedang ditinjau',
                     showConfirmButton: true,
                     })
                 </script>");
@@ -110,17 +105,22 @@ class Kontribusi extends BaseController
         }else {
             $status = $this->request->getVar('status', $this->filter);
             if ($status == 'Diterima') {
-                $accepted_at = date('d-m-Y H:i:s');
+                $this->base_model->delete($id);
+                $field = [
+                    'nama_kontributor'  => $data['nama_kontributor'],
+                    'email_kontributor' => $data['email_kontributor'],
+                    'id_kategori'       => $data['id_kategori'],
+                    'nama'              => $data['nama'],
+                    'tautan'            => $data['tautan'],
+                    'deskripsi'         => $data['deskripsi'],
+                ];
+                $this->produktif_model->insert($field);
             } else {
-                $accepted_at = null;
+                $field = [
+                    'status' => $status,
+                ];
+                $this->base_model->update($id, $field);
             }
-            $field = [
-                'status'        => $status,
-                'accepted_at'   => $accepted_at,
-            ];
-            
-            // dd($field);
-            $this->base_model->update($id, $field);
             return redirect()->to($this->base_route)
             ->with('message',
             "<script>
