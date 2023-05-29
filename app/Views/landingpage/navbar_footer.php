@@ -1,6 +1,6 @@
 <!-- navbar disini -->
 <nav>
-    <div class="container navbar bg-base-100">
+    <div class="container navbar bg-base-100 fixed z-10">
         <div>
             <a class="btn btn-ghost normal-case text-xl">
                 <img src="<?= base_url('assets/img/logo.png') ?>" class="w-40 sm:w-32 md:w-36" alt="logo.png">
