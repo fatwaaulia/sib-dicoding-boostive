@@ -9,18 +9,31 @@
 <link rel="stylesheet" href="<?= base_url() . 'assets/module/datatables/css/buttons.dataTables.min.css' ?>">
 
 <!-- loader -->
-<!-- <div class="loader-bg position-absolute top-50 start-50 translate-middle">
+<div class="loader-bg position-absolute top-50 start-50 translate-middle">
     <div class="loader-p"></div>
 </div>
 <script>
 setTimeout(() => {
     $('.loader-bg').fadeToggle();
 });
-</script> -->
+</script>
 <!-- Akhir Loader -->
 
 <section>
-<div class="container py-5">
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-lg-12">
+            <style>
+            #back-arrow {transition:.5s;}
+            #back-arrow:hover {padding-left:5px;}
+            </style>
+            <a href="<?= base_url('formulir-kontribusi') ?>" class="text-dark" id="back-arrow">
+                <i class="fa-solid fa-arrow-left-long fa-lg"></i>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="container py-4">
     <div class="row">
         <div class="offset-xxl-3 col-xxl-6 col-lg-4 col-md-6">
             <div class="card">
