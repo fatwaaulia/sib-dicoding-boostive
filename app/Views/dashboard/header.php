@@ -17,8 +17,6 @@
 
     <!-- Datatables -->
     <link rel="stylesheet" href="<?= base_url() . 'assets/module/datatables/css/jquery.dataTables.min.css' ?>">
-    <link rel="stylesheet" href="<?= base_url() . 'assets/module/datatables/css/dataTables.dateTime.min.css' ?>">
-    <link rel="stylesheet" href="<?= base_url() . 'assets/module/datatables/css/buttons.dataTables.min.css' ?>">
 
     <!-- AdminKit CSS -->
     <link rel="stylesheet" href="<?= base_url() . 'assets/module/adminkit/css/app.css' ?>">
@@ -85,10 +83,6 @@
     
     <!-- Datatables -->
     <script src="<?= base_url() . 'assets/module/datatables/js/jquery.dataTables.min.js' ?>"></script>
-    <script src="<?= base_url() . 'assets/module/datatables/js/dataTables.buttons.min.js' ?>"></script>
-    <script src="<?= base_url() . 'assets/module/datatables/js/jszip.min.js' ?>"></script>
-    <script src="<?= base_url() . 'assets/module/datatables/js/buttons.html5.min.js' ?>"></script>
-    <script src="<?= base_url() . 'assets/module/datatables/js/buttons.colVis.min.js' ?>"></script>
     <script>
     $(document).ready(function() {
         $('.table-default').DataTable({
@@ -97,23 +91,6 @@
                     "searchable": false,
                     "targets": [0],
                 }
-            ],
-        });
-        $('.table-excel').DataTable({
-            "scrollX": true,
-            "columnDefs": [{
-                    "searchable": false,
-                    "targets": [0],
-                }
-            ],
-            dom: 'Bfrtip',
-            buttons: [{
-                    extend: 'excelHtml5',
-                    exportOptions: {
-                        columns: ':visible'
-                    }
-                },
-                'colvis',
             ],
         });
     });

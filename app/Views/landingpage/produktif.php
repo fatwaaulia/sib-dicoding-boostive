@@ -1,5 +1,6 @@
 
 
+
   <div class="h-10">content</div>
   <section class="px-6 py-12 md:px-12 ">
     <h1 class="text-3xl md:text-4xl xl:text-5xl font-bold tracking-tight mb-8">Kategori</h1>

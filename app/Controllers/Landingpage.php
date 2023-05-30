@@ -15,7 +15,7 @@ class Landingpage extends BaseController
 
     public function produktif()
     {
-        $data['title'] = 'Menu';
+        $data['title'] = 'Produktif';
         
         $data['content'] = view('landingpage/produktif', $data);
         $data['navbar_footer'] = view('landingpage/navbar_footer', $data);
