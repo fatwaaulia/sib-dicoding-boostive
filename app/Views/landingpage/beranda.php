@@ -1,4 +1,4 @@
-<div class="hero px-6 py-12 md:px-12 text-center lg:text-left" style="background-color: #191D25;">
+<div class="hero px-6 pt-20 pb-12 md:px-12 text-center lg:text-left" style="background-color: #191D25;">
     <div class="hero-content text-left text-primary-content">
         <div class="grid md:grid-cols-2 gap-12 flex items-center">
             <div class="mt-4 lg:mt-0">
@@ -7,8 +7,8 @@
             </div>
             <div class="mb-4 lg:mb-0">
                 <img
-                  src="https://mdbootstrap.com/img/new/ecommerce/vertical/028.jpg"
-                  class="w-fit rounded-lg shadow-lg"
+                  src="<?= base_url('assets/img/hero/hero-beranda.png') ?>"
+                  class="w-fit"
                   alt=""
                 />
             </div>

@@ -1,4 +1,4 @@
-<div class="hero rounded-bl-[150px] max-[425px]:rounded-bl-[50px] px-6 py-12 md:px-12 text-center lg:text-left" style="background-color: #191D25;">
+<div class="hero rounded-bl-[150px] max-[425px]:rounded-bl-[50px] px-6 pt-20 pb-12 md:px-12 text-center lg:text-left" style="background-color: #191D25;">
     <div class="hero-content text-left text-primary-content">
         <div class="grid md:grid-cols-2 gap-12 flex items-center">
             <div class="mt-4 lg:mt-0">
@@ -8,7 +8,7 @@
             </div>
             <div class="mb-4 lg:mb-0">
                 <img
-                  src="https://mdbootstrap.com/img/new/ecommerce/vertical/028.jpg"
+                  src="<?= base_url('assets/img/hero/hero-tentang-kami.png') ?>"
                   class="w-fit rounded-lg shadow-lg"
                   alt=""
                 />
