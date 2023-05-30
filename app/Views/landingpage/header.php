@@ -30,7 +30,7 @@
     <?= $navbar_footer ?? '' ?>
 
     <?php 
-    if (service('uri')->getSegment(1) === 'formulir-kontribusi') {
+    if (in_array(service('uri')->getSegment(1), ['formulir-kontribusi', 'status-kontribusi'])) {
         echo $content ?? '';
     }
     ?>

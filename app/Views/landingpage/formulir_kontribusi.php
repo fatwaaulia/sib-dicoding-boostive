@@ -31,7 +31,20 @@
     <!-- Akhir Pesan -->
 
 <section>
-<div class="container py-5">
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-lg-12">
+            <style>
+            #back-arrow {transition:.5s;}
+            #back-arrow:hover {padding-left:5px;}
+            </style>
+            <a href="<?= base_url() ?>" class="text-dark" id="back-arrow">
+                <i class="fa-solid fa-arrow-left-long fa-lg"></i>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="container py-4">
     <div class="row">
         <div class="offset-xxl-3 col-xxl-6 col-lg-4 col-md-6">
             <div class="card">
@@ -40,6 +53,35 @@
                         <h2 class="mb-2 fw-600">Formulir Kontribusi</h2>
                         <p class="mb-4">Bagikan tools bermanfaat kepada banyak orang.</p>
                     </div>
+                    <a href="#" class="float-end" data-bs-toggle="modal" data-bs-target="#exampleModal">Periksa status kontribusi</a>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <form action="<?= base_url('status-kontribusi') ?>" method="get">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Periksa status kontribusi</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="mb-3">
+                                            <label for="periksa_nama_kontributor" class="form-label">Nama Anda</label>
+                                            <input type="text" class="form-control" id="periksa_nama_kontributor" name="nama_kontributor" required placeholder="Masukkan nama anda">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="periksa_email_kontributor" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="periksa_email_kontributor" name="email_kontributor" required placeholder="name@gmail.com">
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                                        <button type="submit" class="btn btn-primary">Periksa</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
                     <form action="<?= base_url('formulir-kontribusi/kirim') ?>" method="post" enctype="multipart/form-data">
                     <?= csrf_field(); ?>
                         <label class="fw-600 mb-3">Kontributor</label>

@@ -42,6 +42,7 @@ $routes->get('tentang-kami', 'Landingpage::tentangKami');
 
 $routes->get('formulir-kontribusi', 'Kontribusi::new');
 $routes->post('formulir-kontribusi/kirim', 'Kontribusi::create');
+$routes->get('status-kontribusi', 'Kontribusi::statusKontribusi');
 
 // == AUTENTIKASI ==
 // Login

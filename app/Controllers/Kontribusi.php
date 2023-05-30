@@ -14,6 +14,14 @@ class Kontribusi extends BaseController
         $this->produktif_model = model('Produktif');
     }
 
+    public function statusKontribusi()
+    {
+        $data['title'] = 'Status Kontribusi';
+        
+        $data['content'] = view('landingpage/status_kontribusi', $data);
+        return view('landingpage/header', $data);
+    }
+
     public function index()
     {
         $data['data'] = $this->base_model->findAll();
