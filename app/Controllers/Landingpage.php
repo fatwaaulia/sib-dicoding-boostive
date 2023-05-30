@@ -22,11 +22,11 @@ class Landingpage extends BaseController
         return view('landingpage/header', $data);
     }
 
-    public function tentangKami()
+    public function kategoriProduktif($kategori)
     {
-        $data['title'] = 'Tentang Kami';
+        $data['title'] = 'Kategori Produktif - ' . $kategori;
         
-        $data['content'] = view('landingpage/tentang_kami', $data);
+        $data['content'] = view('landingpage/kategori_produktif', $data);
         $data['navbar_footer'] = view('landingpage/navbar_footer', $data);
         return view('landingpage/header', $data);
     }
@@ -36,6 +36,15 @@ class Landingpage extends BaseController
         $data['title'] = 'Tentang Kami';
         
         $data['content'] = view('landingpage/detail_tautan_produktif', $data);
+        $data['navbar_footer'] = view('landingpage/navbar_footer', $data);
+        return view('landingpage/header', $data);
+    }
+
+    public function tentangKami()
+    {
+        $data['title'] = 'Tentang Kami';
+        
+        $data['content'] = view('landingpage/tentang_kami', $data);
         $data['navbar_footer'] = view('landingpage/navbar_footer', $data);
         return view('landingpage/header', $data);
     }
