@@ -31,11 +31,11 @@ class Landingpage extends BaseController
         return view('landingpage/header', $data);
     }
 
-    public function detailTautanProduktif()
+    public function detailProduktif()
     {
-        $data['title'] = 'Tentang Kami';
+        $data['title'] = 'Detail Produktif';
         
-        $data['content'] = view('landingpage/detail_tautan_produktif', $data);
+        $data['content'] = view('landingpage/detail_produktif', $data);
         $data['navbar_footer'] = view('landingpage/navbar_footer', $data);
         return view('landingpage/header', $data);
     }
