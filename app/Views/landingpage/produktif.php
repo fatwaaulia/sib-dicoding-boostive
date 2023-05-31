@@ -6,77 +6,63 @@
     <h1 class="text-3xl md:text-4xl xl:text-5xl font-bold tracking-tight mb-8">Kategori</h1>
     <div class="grid grid-cols-2 max-[425px]:grid-cols-1 lg:grid-cols-3 gap-x-10 gap-y-8">
         <a class="flex items-center" href="<?= base_url('produktif/TK') ?>">
-            <div class="avatar placeholder">
-                <div class="bg-yellow-200 text-neutral-content rounded-full w-16">
-                    <span class="text-2xl text-yellow-800 font-semibold">TK</span>
+                <div class="flex justify-center bg-yellow-200 rounded-full w-16 h-16 overflow-hidden">
+                    <img class="w-auto" src="<?=base_url("assets/img/category-icon/tk-cat-icon.png")?>"></img>
                 </div>
-            </div> 
             <div class="text-sm ms-4">
                 <p class="text-black font-semibold">TK</p>
                 <p class="text-neutral-500">Taman Kanak-Kanak</p>
             </div>
         </a>
         <a class="flex items-center" href="<?= base_url('produktif/SD') ?>">
-            <div class="avatar placeholder">
-                <div class="bg-red-200 text-neutral-content rounded-full w-16">
-                    <span class="text-2xl text-red-800 font-semibold">SD</span>
-                </div>
-            </div> 
+            <div class="flex justify-center bg-red-200 rounded-full w-16 h-16 overflow-hidden">
+                <img class="w-auto" src="<?=base_url("assets/img/category-icon/sd-cat-icon.png")?>"></img>
+             </div>
             <div class="text-sm ms-4">
                 <p class="text-black font-semibold">SD</p>
                 <p class="text-neutral-500">Sekolah Dasar</p>
             </div>
         </a>
         <a class="flex items-center" href="<?= base_url('produktif/SMP') ?>">
-            <div class="avatar placeholder">
-                <div class="bg-blue-200 text-neutral-content rounded-full w-16">
-                    <span class="text-2xl text-blue-800 font-semibold">SMP</span>
-                </div>
-            </div> 
+            <div class="flex justify-center bg-red-200 rounded-full w-16 h-16 overflow-hidden">
+                <img class="w-auto" src="<?=base_url("assets/img/category-icon/smp-cat-icon.png")?>"></img>
+             </div>
             <div class="text-sm ms-4">
                 <p class="text-black font-semibold">SMP</p>
                 <p class="text-neutral-500">Sekolah Menengah Pertama</p>
             </div>
         </a>
         <a class="flex items-center" href="<?= base_url('produktif/SMA') ?>">
-            <div class="avatar placeholder">
-                <div class="bg-slate-200 text-neutral-content rounded-full w-16">
-                    <span class="text-2xl text-slate-800 font-semibold">SMA</span>
-                </div>
-            </div> 
+            <div class="flex justify-center bg-red-200 rounded-full w-16 h-16 overflow-hidden">
+                <img class="w-auto" src="<?=base_url("assets/img/category-icon/sma-cat-icon.png")?>"></img>
+             </div>
             <div class="text-sm ms-4">
                 <p class="text-black font-semibold">SMA</p>
                 <p class="text-neutral-500">Sekolah Menengah Atas</p>
             </div>
         </a>
         <a class="flex items-center" href="<?= base_url('produktif/kuliah') ?>">
-            <div class="avatar placeholder">
-                <div class="bg-emerald-200 text-neutral-content rounded-full w-16">
-                    <span class="text-2xl text-emerald-800 font-semibold">PTN</span>
-                </div>
-            </div> 
+            <div class="flex justify-center bg-red-200 rounded-full w-16 h-16 overflow-hidden">
+                <img class="w-auto" src="<?=base_url("assets/img/category-icon/kuliah-cat-icon.png")?>"></img>
+             </div>
             <div class="text-sm ms-4">
                 <p class="text-black font-semibold">Kuliah</p>
                 <p class="text-neutral-500">Perguruan Tinggi</p>
             </div>
         </a>
         <a class="flex items-center" href="<?= base_url('produktif/semua-usia') ?>">
-            <div class="avatar placeholder">
-                <div class="bg-indigo-200 text-neutral-content rounded-full w-16">
-                    <span class="text-2xl text-indigo-800 font-semibold">SU</span>
-                </div>
-            </div> 
+            <div class="flex justify-center bg-red-200 rounded-full w-16 h-16 overflow-hidden">
+                <img class="w-auto" src="<?=base_url("assets/img/category-icon/su-cat-icon.png")?>"></img>
+             </div>
             <div class="text-sm ms-4">
                 <p class="text-black font-semibold">Semua Usia</p>
                 <p class="text-neutral-500">Untuk Semua Kalangan</p>
             </div>
         </a>
         <a class="flex items-center" href="<?= base_url('produktif/orang-tua') ?>">
-            <div class="avatar placeholder">
-                <div class="bg-fuchsia-200 text-neutral-content rounded-full w-16">
-                    <span class="text-2xl text-fuchsia-800 font-semibold">TK</span>
-                </div>
-            </div> 
+            <div class="flex justify-center bg-red-200 rounded-full w-16 h-16 overflow-hidden">
+                <img class="w-auto" src="<?=base_url("assets/img/category-icon/orang-tua-cat-icon.png")?>"></img>
+             </div>
             <div class="text-sm ms-4">
                 <p class="text-black font-semibold">Orang Tua</p>
                 <p class="text-neutral-500">Untuk dipelajari oleh Orang Tua</p>
@@ -130,4 +116,3 @@
         </div>
     </div>
   </section>
-
