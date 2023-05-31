@@ -1,3 +1,5 @@
+<html style="background-color:#f5f7fb">
+
 <link rel="stylesheet" href="<?= base_url() . 'assets/css/bootstrap.min.css' ?>">
 <link rel="stylesheet" href="<?= base_url() . 'assets/css/main.css' ?>">
 
