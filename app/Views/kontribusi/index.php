@@ -35,7 +35,7 @@
                                     <i class="fa-solid fa-up-right-from-square ms-1"></i>
                                 </a>
                             </td>
-                            <td><?= $v['nama_kontributor'] ?></td>
+                            <td><?= $v['nama_kontributor'] . '<br>' . $v['email_kontributor'] ?></td>
                             <td><?= $v['status'] ?></td>
                             <td>
                                 <a href="#" data-bs-toggle="modal" data-bs-target="#periksa_pengajuan_kontribusi<?= model('Env')->encode($v['id']) ?>">
@@ -56,6 +56,11 @@
                                                     </div>
                                                     <div class="col-6 text-end">
                                                         <?= date('d-m-Y H:i', strtotime($v['created_at'])) ?>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <?= $v['email_kontributor'] ?>
                                                     </div>
                                                 </div>
                                                 <hr>
