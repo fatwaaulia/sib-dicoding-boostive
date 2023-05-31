@@ -53,15 +53,15 @@ $routes->get('logout', 'Auth::logout');
 // Lupa password
 $routes->get('forgot-password', 'Auth::forgotPassword');
 $routes->post('forgot-password-process', 'Auth::forgotPasswordProcess');
-$routes->get('reset-password/(:any)', 'Auth::resetPassword/$1');
-$routes->post('reset-password-process/(:any)', 'Auth::resetPasswordProcess/$1');
+$routes->get('reset-password/(:segment)', 'Auth::resetPassword/$1');
+$routes->post('reset-password-process/(:segment)', 'Auth::resetPasswordProcess/$1');
 // Register
 $routes->get('register', 'Auth::register');
 $routes->post('register-process', 'Auth::registerProcess');
 // Aktivasi akun
-$routes->get('account-activation/(:any)', 'Auth::accountActivation/$1');
+$routes->get('account-activation/(:segment)', 'Auth::accountActivation/$1');
 // Cek kirim email
-$routes->get('send-email/(:any)/(:any)', 'Auth::sendEmail/$1/$2');
+$routes->get('send-email/(:segment)/(:segment)', 'Auth::sendEmail/$1/$2');
 $routes->get('email-template', 'Auth::template');
 
 // == Is login ==
