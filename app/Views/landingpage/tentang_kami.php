@@ -38,8 +38,8 @@
     <div class="grid grid-cols-2 max-[600px]:grid-cols-1 xl:grid-cols-4 gap-x-10 gap-y-8">
         <article class="card bg-base-100 shadow-xl">
             <figure><img
-                  src="https://images.unsplash.com/photo-1480429370139-e0132c086e2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=776&q=80"
-                  alt=""
+                  src="<?= base_url('assets/img/team/akmal.png') ?>"
+                  alt="Hafizhuddin Akmal"
                   class="h-80"/></figure>
             <div class="card-body">
                 <h1 class="card-title">Hafizhuddin Akmal</h2>
@@ -48,8 +48,8 @@
         </article>
         <article class="card bg-base-100 shadow-xl">
             <figure><img
-                  src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
-                  alt=""
+                  src="<?= base_url('assets/img/team/adil.png') ?>"
+                  alt="Muhammad Adil Raja Saputra"
                   class="h-80"/></figure>
             <div class="card-body">
                 <h1 class="card-title">Muhammad Adil Raja Saputra</h2>
@@ -58,8 +58,8 @@
         </article>
         <article class="card bg-base-100 shadow-xl">
             <figure><img
-                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80"
-                  alt=""
+                  src="<?= base_url('assets/img/team/jessica.png') ?>"
+                  alt="Jessica Kristina Hutasoit"
                   class="h-80"/></figure>
             <div class="card-body">
                 <h1 class="card-title">Jessica Kristina Hutasoit</h2>
@@ -68,8 +68,8 @@
         </article>
         <article class="card bg-base-100 shadow-xl">
             <figure><img
-                  src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
-                  alt=""
+                  src="<?= base_url('assets/img/team/fatwa.png') ?>"
+                  alt="Fatwa Aulia"
                   class="h-80"/></figure>
             <div class="card-body">
                 <h1 class="card-title">Fatwa Aulia</h2>
