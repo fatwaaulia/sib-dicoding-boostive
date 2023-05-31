@@ -73,11 +73,14 @@ class Kontribusi extends BaseController
                     })
                 </script>");
             } else {
+                $nama = trim($this->request->getVar('nama', $this->filter));
+                $slug = $this->env_model->slug($nama);
                 $field = [
                     'nama_kontributor'  => $this->request->getVar('nama_kontributor', $this->filter),
                     'email_kontributor' => $this->request->getVar('email_kontributor', $this->filter),
                     'id_kategori'       => $this->request->getVar('id_kategori', $this->filter),
-                    'nama'              => trim($this->request->getVar('nama', $this->filter)),
+                    'nama'              => $nama,
+                    'slug'              => $slug,
                     'tautan'            => trim($this->request->getVar('tautan', $this->filter)),
                     'deskripsi'         => $this->request->getVar('deskripsi', $this->filter),
                     'status'            => 'Diproses',
@@ -119,6 +122,7 @@ class Kontribusi extends BaseController
                     'email_kontributor' => $data['email_kontributor'],
                     'id_kategori'       => $data['id_kategori'],
                     'nama'              => $data['nama'],
+                    'slug'              => $data['slug'],
                     'tautan'            => $data['tautan'],
                     'deskripsi'         => $data['deskripsi'],
                 ];
