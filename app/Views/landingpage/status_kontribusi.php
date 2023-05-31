@@ -40,7 +40,27 @@ setTimeout(() => {
                 <div class="card-body">
                     <div class="text-center">
                         <h2 class="mb-2 fw-600">Status Kontribusi Anda</h2>
-                        <p class="mb-4">Terima kasih atas kontribusi Anda dalam berbagi tools bermanfaat.</p>
+                        <?php
+                        $nama_kontributor = $_GET['nama_kontributor'];
+                        $email_kontributor = $_GET['email_kontributor'];
+                        $where = [
+                            'nama_kontributor' => $nama_kontributor,
+                            'email_kontributor' => $email_kontributor,
+                        ];
+                        $data_kontribusi = model('Kontribusi')->where($where)->findAll();
+                        $data_produktif = model('Produktif')->where($where)->findAll();
+                        $status_kontribusi = array_merge($data_kontribusi, $data_produktif);
+
+                        if ($status_kontribusi) {
+                        ?>
+                        <p>Terima kasih atas kontribusi Anda dalam berbagi tools bermanfaat.</p>
+                        <?php } else { ?>
+                        <p>Anda belum memiliki kontribusi, mulai bagikan tools bermanfaat <a href="<?= base_url('formulir-kontribusi') ?>">disini.</a></p>
+                        <?php } ?>
+                    </div>
+                    <div class="mb-4">
+                        <label>Nama: <?= $_GET['nama_kontributor'] ?></label> <br>
+                        <label>Email: <?= $_GET['email_kontributor'] ?></label>
                     </div>
                     <table class="table-default display nowrap w-100">
                         <thead>
@@ -48,21 +68,12 @@ setTimeout(() => {
                                 <th>No.</th>
                                 <th>Kategori</th>
                                 <th>Nama Kegiatan</th>
-                                <th>Kontributor</th>
                                 <th>Status</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php
-                            $nama_kontributor = $_GET['nama_kontributor'];
-                            $email_kontributor = $_GET['email_kontributor'];
-                            $where = [
-                                'nama_kontributor' => $nama_kontributor,
-                                'email_kontributor' => $email_kontributor,
-                            ];
-                            $data_kontribusi = model('Kontribusi')->where($where)->findAll();
-                            $data_produktif = model('Produktif')->where($where)->findAll();
-                            foreach (array_merge($data_kontribusi, $data_produktif) as $key => $v) :
+                            foreach ($status_kontribusi as $key => $v) :
                             ?>
                             <tr>
                                 <td><?= $key+1 ?></td>
@@ -78,7 +89,6 @@ setTimeout(() => {
                                         <i class="fa-solid fa-up-right-from-square ms-1"></i>
                                     </a>
                                 </td>
-                                <td><?= $v['nama_kontributor'] ?></td>
                                 <td>
                                 <?php
                                 $status = isset($v['status']);

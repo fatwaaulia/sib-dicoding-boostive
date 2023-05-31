@@ -41,7 +41,7 @@
                                     <i class="fa-solid fa-up-right-from-square ms-1"></i>
                                 </a>
                             </td>
-                            <td><?= $v['nama_kontributor'] ?></td>
+                            <td><?= $v['nama_kontributor'] . '<br>' . $v['email_kontributor'] ?></td>
                             <td>
                                 <a href="<?= $base_route . '/edit/' . model('Env')->encode($v['id']) ?>">
                                     <i class="fa-regular fa-pen-to-square fa-lg me-2"></i>
