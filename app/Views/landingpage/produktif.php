@@ -6,8 +6,8 @@
     <h1 class="text-3xl md:text-4xl xl:text-5xl font-bold tracking-tight mb-8">Kategori</h1>
     <div class="grid grid-cols-2 max-[425px]:grid-cols-1 lg:grid-cols-3 gap-x-10 gap-y-8">
         <a class="flex items-center" href="<?= base_url('produktif/TK') ?>">
-                <div class="flex justify-center bg-yellow-200 rounded-full w-16 h-16 overflow-hidden">
-                    <img class="w-auto" src="<?=base_url("assets/img/category-icon/tk-cat-icon.png")?>"></img>
+                <div class="w-[48px] h-[48px] flex flex-shrink-0 justify-center items-center bg-yellow-200 rounded-full md:w-16 md:h-16 sm:w-14 sm:h-14 overflow-hidden">
+                    <img class="h-[56px] w-[26px] object-contain aspect-square rounded" src="<?=base_url("assets/img/category-icon/tk-cat-icon.png")?>"></img>
                 </div>
             <div class="text-sm ms-4">
                 <p class="text-black font-semibold">TK</p>
@@ -15,8 +15,8 @@
             </div>
         </a>
         <a class="flex items-center" href="<?= base_url('produktif/SD') ?>">
-            <div class="flex justify-center bg-red-200 rounded-full w-16 h-16 overflow-hidden">
-                <img class="w-auto" src="<?=base_url("assets/img/category-icon/sd-cat-icon.png")?>"></img>
+            <div class="flex flex-shrink-0 justify-center items-center bg-red-200 rounded-full md:w-16 md:h-16 sm:w-14 sm:h-14 overflow-hidden">
+                <img class="w-[48px] aspect-square rounded" src="<?=base_url("assets/img/category-icon/sd-cat-icon.png")?>"></img>
              </div>
             <div class="text-sm ms-4">
                 <p class="text-black font-semibold">SD</p>
@@ -24,8 +24,8 @@
             </div>
         </a>
         <a class="flex items-center" href="<?= base_url('produktif/SMP') ?>">
-            <div class="flex justify-center bg-red-200 rounded-full w-16 h-16 overflow-hidden">
-                <img class="w-auto" src="<?=base_url("assets/img/category-icon/smp-cat-icon.png")?>"></img>
+            <div class="flex flex-shrink-0 justify-center items-center bg-red-200 rounded-full md:w-16 md:h-16 sm:w-14 sm:h-14 overflow-hidden">
+                <img class="w-[48px] aspect-square rounded flex-shrink-0" src="<?=base_url("assets/img/category-icon/smp-cat-icon.png")?>"></img>
              </div>
             <div class="text-sm ms-4">
                 <p class="text-black font-semibold">SMP</p>
@@ -33,8 +33,8 @@
             </div>
         </a>
         <a class="flex items-center" href="<?= base_url('produktif/SMA') ?>">
-            <div class="flex justify-center bg-red-200 rounded-full w-16 h-16 overflow-hidden">
-                <img class="w-auto" src="<?=base_url("assets/img/category-icon/sma-cat-icon.png")?>"></img>
+            <div class="flex flex-shrink-0 justify-center items-center bg-red-200 rounded-full md:w-16 md:h-16 sm:w-14 sm:h-14 overflow-hidden">
+                <img class="w-[48px] aspect-square rounded" src="<?=base_url("assets/img/category-icon/sma-cat-icon.png")?>"></img>
              </div>
             <div class="text-sm ms-4">
                 <p class="text-black font-semibold">SMA</p>
@@ -42,8 +42,8 @@
             </div>
         </a>
         <a class="flex items-center" href="<?= base_url('produktif/kuliah') ?>">
-            <div class="flex justify-center bg-red-200 rounded-full w-16 h-16 overflow-hidden">
-                <img class="w-auto" src="<?=base_url("assets/img/category-icon/kuliah-cat-icon.png")?>"></img>
+            <div class="flex flex-shrink-0 justify-center items-center bg-red-200 rounded-full md:w-16 md:h-16 sm:w-14 sm:h-14 overflow-hidden">
+                <img class="w-[48px] aspect-square rounded" src="<?=base_url("assets/img/category-icon/kuliah-cat-icon.png")?>"></img>
              </div>
             <div class="text-sm ms-4">
                 <p class="text-black font-semibold">Kuliah</p>
@@ -51,8 +51,8 @@
             </div>
         </a>
         <a class="flex items-center" href="<?= base_url('produktif/semua-usia') ?>">
-            <div class="flex justify-center bg-red-200 rounded-full w-16 h-16 overflow-hidden">
-                <img class="w-auto" src="<?=base_url("assets/img/category-icon/su-cat-icon.png")?>"></img>
+            <div class="flex flex-shrink-0 justify-center items-center bg-red-200 rounded-full md:w-16 md:h-16 sm:w-14 sm:h-14 overflow-hidden">
+                <img class="w-[48px] aspect-square rounded" src="<?=base_url("assets/img/category-icon/su-cat-icon.png")?>"></img>
              </div>
             <div class="text-sm ms-4">
                 <p class="text-black font-semibold">Semua Usia</p>
@@ -60,8 +60,8 @@
             </div>
         </a>
         <a class="flex items-center" href="<?= base_url('produktif/orang-tua') ?>">
-            <div class="flex justify-center bg-red-200 rounded-full w-16 h-16 overflow-hidden">
-                <img class="w-auto" src="<?=base_url("assets/img/category-icon/orang-tua-cat-icon.png")?>"></img>
+            <div class="flex flex-shrink-0 justify-center items-center bg-red-200 rounded-full md:w-16 md:h-16 sm:w-14 sm:h-14 overflow-hidden">
+                <img class="w-[48px] aspect-square rounded" src="<?=base_url("assets/img/category-icon/orang-tua-cat-icon.png")?>"></img>
              </div>
             <div class="text-sm ms-4">
                 <p class="text-black font-semibold">Orang Tua</p>
