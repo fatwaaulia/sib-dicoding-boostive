@@ -37,8 +37,8 @@ $routes->set404Override(
 // route since we don't have to scan directories.
 $routes->get('/', 'Landingpage::beranda');
 $routes->get('produktif', 'Landingpage::produktif');
-$routes->get('produktif/(:any)', 'Landingpage::kategoriProduktif/$1');
-$routes->get('produktif/(:any)/(:any)', 'Landingpage::detailTautanProduktif');
+$routes->get('produktif/(:segment)', 'Landingpage::kategoriProduktif/$1');
+$routes->get('produktif/(:segment)/(:segment)', 'Landingpage::detailProduktif/$1/$2');
 $routes->get('tentang-kami', 'Landingpage::tentangKami');
 
 $routes->get('formulir-kontribusi', 'Kontribusi::new');
