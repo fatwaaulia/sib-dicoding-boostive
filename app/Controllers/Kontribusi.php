@@ -116,17 +116,26 @@ class Kontribusi extends BaseController
         }else {
             $status = $this->request->getVar('status', $this->filter);
             if ($status == 'Diterima') {
-                $this->base_model->delete($id);
+                $img = $this->request->getFile('img');
+                if ($img != '') {
+                    $img_name = $img->getRandomName();
+                    $this->image->withFile($img)->save('assets/img/produktif/' . $img_name, 60);
+                } else {
+                    $img_name = '';
+                }
                 $field = [
                     'nama_kontributor'  => $data['nama_kontributor'],
                     'email_kontributor' => $data['email_kontributor'],
                     'id_kategori'       => $data['id_kategori'],
                     'nama'              => $data['nama'],
                     'slug'              => $data['slug'],
+                    'img'               => $img_name,
                     'tautan'            => $data['tautan'],
                     'deskripsi'         => $data['deskripsi'],
                 ];
+
                 $this->produktif_model->insert($field);
+                $this->base_model->delete($id);
             } else {
                 $field = [
                     'status' => $status,
