@@ -24,7 +24,7 @@ class Kontribusi extends BaseController
 
     public function index()
     {
-        $data['data'] = $this->base_model->findAll();
+        $data['data'] = $this->base_model->orderBy('id','DESC')->findAll();
         $data['base_name'] = $this->base_name;
         $data['base_route'] = $this->base_route;
         $data['title'] = 'Data Kontribusi';
