@@ -44,7 +44,6 @@ setTimeout(() => {
                         $nama_kontributor = $_GET['nama_kontributor'];
                         $email_kontributor = $_GET['email_kontributor'];
                         $where = [
-                            'nama_kontributor' => $nama_kontributor,
                             'email_kontributor' => $email_kontributor,
                         ];
                         $data_kontribusi = model('Kontribusi')->where($where)->findAll();
@@ -53,14 +52,13 @@ setTimeout(() => {
 
                         if ($status_kontribusi) {
                         ?>
-                        <p>Terima kasih atas kontribusi Anda dalam berbagi tools bermanfaat.</p>
+                        <p>Hai <span class="fw-500"><?= ucwords($nama_kontributor) ?></span>, terima kasih atas kontribusi Anda dalam berbagi tools bermanfaat.</p>
                         <?php } else { ?>
                         <p>Anda belum memiliki kontribusi, mulai bagikan tools bermanfaat <a href="<?= base_url('formulir-kontribusi') ?>">disini.</a></p>
                         <?php } ?>
                     </div>
                     <div class="mb-4">
-                        <label>Nama: <?= $_GET['nama_kontributor'] ?></label> <br>
-                        <label>Email: <?= $_GET['email_kontributor'] ?></label>
+                        <label>Email: <?= $email_kontributor ?></label>
                     </div>
                     <table class="table-default display nowrap w-100">
                         <thead>
