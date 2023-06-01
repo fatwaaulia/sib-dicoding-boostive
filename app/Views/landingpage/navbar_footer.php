@@ -45,12 +45,12 @@
 
 
 <!-- footer disini -->
-<footer class="footer items-center p-4 bg-base-200 text-neutral-content">
-    <div class="items-center grid-flow-row">
+<footer class="mt-4 footer items-center p-4 bg-base-200 text-neutral-content gap-y-1">
+    <div class="items-center flex flex-row">
         <img width="36" height="36" viewBox="0 0 24 24" src="<?= base_url('assets/img/logo.png') ?>" class="w-40 sm:w-32 md:w-36" alt="logo.png"> 
         <p class="text-neutral">Mengenal Tools produktif melalui kami.</p>
     </div> 
-    <div class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+    <div class="md:place-self-center md:justify-self-end">
         <a href="https://github.com/fatwaaulia/sib-dicoding-boostive.git">
             <img src="<?= base_url('assets/img/github-logo.png') ?>">
         </a> 
