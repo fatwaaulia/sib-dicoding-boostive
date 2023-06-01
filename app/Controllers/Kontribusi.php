@@ -103,9 +103,9 @@ class Kontribusi extends BaseController
     }
 
     // Superadmin
-    public function update($id = null)
+    public function update($id_encode = null)
     {
-        $id = $this->env_model->decode($id);
+        $id = $this->env_model->decode($id_encode);
         $data = $this->base_model->find($id);
 
         $rules = [

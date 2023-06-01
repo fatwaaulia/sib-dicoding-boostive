@@ -83,9 +83,9 @@ class Produktif extends BaseController
         }
     }
 
-    public function edit($id = null)
+    public function edit($id_encode = null)
     {
-        $id = $this->env_model->decode($id);
+        $id = $this->env_model->decode($id_encode);
         $data['data'] = $this->base_model->find($id);
         $data['base_name'] = $this->base_name;
         $data['base_route'] = $this->base_route;
@@ -97,9 +97,9 @@ class Produktif extends BaseController
 
     }
 
-    public function update($id = null)
+    public function update($id_encode = null)
     {
-        $id = $this->env_model->decode($id);
+        $id = $this->env_model->decode($id_encode);
         $data = $this->base_model->find($id);
 
         $rules = [
@@ -148,9 +148,9 @@ class Produktif extends BaseController
         }
     }
 
-    public function delete($id = null)
+    public function delete($id_encode = null)
     {
-        $id = $this->env_model->decode($id);
+        $id = $this->env_model->decode($id_encode);
         $data = $this->base_model->find($id);
 
         $this->base_model->delete($id);
@@ -168,16 +168,16 @@ class Produktif extends BaseController
         </script>");
     }
 
-    public function deleteImg($id = null)
+    public function deleteImg($id_encode = null)
     {
-        $id_decode = $this->env_model->decode($id);
+        $id_decode = $this->env_model->decode($id_encode);
         $data = $this->base_model->find($id_decode);
 
         $file = 'assets/img/' . $this->base_name . '/' . $data['img'];
         if (is_file($file)) unlink($file);
 
         $this->base_model->update($id_decode, ['img' => '']);
-        return redirect()->to($this->base_route . '/edit/' . $id)
+        return redirect()->to($this->base_route . '/edit/' . $id_encode)
         ->with('message',
         "<script>
             Swal.fire({
