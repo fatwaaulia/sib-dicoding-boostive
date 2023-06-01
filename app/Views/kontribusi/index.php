@@ -42,7 +42,7 @@
                                     <i class="fa-regular fa-pen-to-square fa-lg"></i>
                                 </a>
                                 <!-- Modal -->
-                                <div class="modal fade" id="periksa_pengajuan_kontribusi<?= model('Env')->encode($v['id']) ?>" tabindex="-1" aria-labelledby="periksaDataLabel" aria-hidden="true">
+                                <div class="modal fade" id="periksa_pengajuan_kontribusi<?= model('Env')->encode($v['id']) ?>" data-bs-backdrop="static" tabindex="-1" aria-labelledby="periksaDataLabel" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-scrollable">
                                         <div class="modal-content">
                                             <div class="modal-header">
