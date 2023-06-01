@@ -15,7 +15,7 @@ class Produktif extends BaseController
 
     public function index()
     {
-        $data['data'] = $this->base_model->findAll();
+        $data['data'] = $this->base_model->orderBy('id','DESC')->findAll();
         $data['base_name'] = $this->base_name;
         $data['base_route'] = $this->base_route;
         $data['title'] = 'Data ' . ucwords(str_replace('_', ' ', $this->base_name));
@@ -46,11 +46,22 @@ class Produktif extends BaseController
         if (! $this->validate($rules)) {
             return redirect()->back()->withInput();
         }else {
+            $img = $this->request->getFile('img');
+            if ($img != '') {
+                $img_name = $img->getRandomName();
+                $this->image->withFile($img)->save('assets/img/' . $this->base_name . '/' . $img_name, 60);
+            } else {
+                $img_name = '';
+            }
+            $nama = trim($this->request->getVar('nama', $this->filter));
+            $slug = $this->env_model->slug($nama);
             $field = [
                 'nama_kontributor'  => $this->user_session['nama'],
                 'email_kontributor' => $this->user_session['email'],
                 'id_kategori'       => $this->request->getVar('id_kategori', $this->filter),
-                'nama'              => trim($this->request->getVar('nama', $this->filter)),
+                'nama'              => $nama,
+                'slug'              => $slug,
+                'img'               => $img_name,
                 'tautan'            => trim($this->request->getVar('tautan', $this->filter)),
                 'deskripsi'         => $this->request->getVar('deskripsi', $this->filter),
             ];
@@ -72,9 +83,9 @@ class Produktif extends BaseController
         }
     }
 
-    public function edit($id = null)
+    public function edit($id_encode = null)
     {
-        $id = $this->env_model->decode($id);
+        $id = $this->env_model->decode($id_encode);
         $data['data'] = $this->base_model->find($id);
         $data['base_name'] = $this->base_name;
         $data['base_route'] = $this->base_route;
@@ -86,9 +97,9 @@ class Produktif extends BaseController
 
     }
 
-    public function update($id = null)
+    public function update($id_encode = null)
     {
-        $id = $this->env_model->decode($id);
+        $id = $this->env_model->decode($id_encode);
         $data = $this->base_model->find($id);
 
         $rules = [
@@ -100,9 +111,22 @@ class Produktif extends BaseController
         if (! $this->validate($rules)) {
             return redirect()->back()->withInput();
         }else {
+            $img = $this->request->getFile('img');
+            if ($img != '') {
+                $file = 'assets/img/' . $this->base_name . '/' . $data['img'];
+                if (is_file($file)) unlink($file);
+                $img_name = $img->getRandomName();
+                $this->image->withFile($img)->save('assets/img/' . $this->base_name . '/' . $img_name, 60);
+            } else {
+                $img_name = $data['img'];
+            }
+            $nama = trim($this->request->getVar('nama', $this->filter));
+            $slug = $this->env_model->slug($nama);
             $field = [
                 'id_kategori'       => $this->request->getVar('id_kategori', $this->filter),
-                'nama'              => trim($this->request->getVar('nama', $this->filter)),
+                'nama'              => $nama,
+                'slug'              => $slug,
+                'img'               => $img_name,
                 'tautan'            => trim($this->request->getVar('tautan', $this->filter)),
                 'deskripsi'         => $this->request->getVar('deskripsi', $this->filter),
             ];
@@ -124,9 +148,9 @@ class Produktif extends BaseController
         }
     }
 
-    public function delete($id = null)
+    public function delete($id_encode = null)
     {
-        $id = $this->env_model->decode($id);
+        $id = $this->env_model->decode($id_encode);
         $data = $this->base_model->find($id);
 
         $this->base_model->delete($id);
@@ -137,6 +161,29 @@ class Produktif extends BaseController
             position: 'top-end',
             icon: 'success',
             title: 'Data berhasil dihapus',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            })
+        </script>");
+    }
+
+    public function deleteImg($id_encode = null)
+    {
+        $id_decode = $this->env_model->decode($id_encode);
+        $data = $this->base_model->find($id_decode);
+
+        $file = 'assets/img/' . $this->base_name . '/' . $data['img'];
+        if (is_file($file)) unlink($file);
+
+        $this->base_model->update($id_decode, ['img' => '']);
+        return redirect()->to($this->base_route . '/edit/' . $id_encode)
+        ->with('message',
+        "<script>
+            Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Gambar dihapus',
             showConfirmButton: false,
             timer: 3000,
             timerProgressBar: true,

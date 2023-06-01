@@ -42,7 +42,7 @@
                                     <i class="fa-regular fa-pen-to-square fa-lg"></i>
                                 </a>
                                 <!-- Modal -->
-                                <div class="modal fade" id="periksa_pengajuan_kontribusi<?= model('Env')->encode($v['id']) ?>" tabindex="-1" aria-labelledby="periksaDataLabel" aria-hidden="true">
+                                <div class="modal fade" id="periksa_pengajuan_kontribusi<?= model('Env')->encode($v['id']) ?>" data-bs-backdrop="static" tabindex="-1" aria-labelledby="periksaDataLabel" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-scrollable">
                                         <div class="modal-content">
                                             <div class="modal-header">
@@ -80,7 +80,7 @@
                                                     <label class="form-label">Tautan </label> <br>
                                                     <a href="<?= $v['tautan'] ?>" target="_blank"><?= $v['tautan'] ?></a>
                                                 </div>
-                                                <form action="<?= base_url('pengajuan-kontribusi/update/') . model('Env')->encode($v['id']) ?>" method="post">
+                                                <form action="<?= base_url('pengajuan-kontribusi/update/') . model('Env')->encode($v['id']) ?>" method="post" enctype="multipart/form-data">
                                                 <?= csrf_field(); ?>
                                                 <div class="mb-3">
                                                     <label for="status" class="form-label">Status</label>
@@ -107,6 +107,16 @@
                                                     </select>
                                                     <div class="invalid-feedback">
                                                         <?= validation_show_error('status') ?>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="status" class="form-label">Gambar Kegiatan</label>
+                                                    <input type="file" class="form-control mb-1" name="img" accept="image/*" onchange="preview()">
+                                                    <span class="<?= validation_show_error('img') ? 'is-invalid' : '' ?>">
+                                                    </span>
+                                                    <img src="<?= base_url('assets/img/default.png') ?>" class="w-100 h-100 img-style <?= validation_show_error('img') ? 'border border-danger' : '' ?>" id="frame">
+                                                    <div class="invalid-feedback">
+                                                        <?= str_replace('img,', 'gambar ', validation_show_error('img')) ?>
                                                     </div>
                                                 </div>
                                             </div>

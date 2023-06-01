@@ -177,6 +177,7 @@ dselect(document.querySelector('#id_role'));
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
                 <form action="<?= $base_route . '/delete-image/' . model('Env')->encode($data['id']) ?>" method="post">
+                    <?= csrf_field(); ?>
                     <button type="submit" class="btn btn-danger">Hapus</button>
                 </form>
             </div>
