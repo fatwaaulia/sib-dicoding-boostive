@@ -46,11 +46,14 @@ class Produktif extends BaseController
         if (! $this->validate($rules)) {
             return redirect()->back()->withInput();
         }else {
+            $nama = trim($this->request->getVar('nama', $this->filter));
+            $slug = $this->env_model->slug($nama);
             $field = [
                 'nama_kontributor'  => $this->user_session['nama'],
                 'email_kontributor' => $this->user_session['email'],
                 'id_kategori'       => $this->request->getVar('id_kategori', $this->filter),
-                'nama'              => trim($this->request->getVar('nama', $this->filter)),
+                'nama'              => $nama,
+                'slug'              => $slug,
                 'tautan'            => trim($this->request->getVar('tautan', $this->filter)),
                 'deskripsi'         => $this->request->getVar('deskripsi', $this->filter),
             ];
@@ -100,9 +103,12 @@ class Produktif extends BaseController
         if (! $this->validate($rules)) {
             return redirect()->back()->withInput();
         }else {
+            $nama = trim($this->request->getVar('nama', $this->filter));
+            $slug = $this->env_model->slug($nama);
             $field = [
                 'id_kategori'       => $this->request->getVar('id_kategori', $this->filter),
-                'nama'              => trim($this->request->getVar('nama', $this->filter)),
+                'nama'              => $nama,
+                'slug'              => $slug,
                 'tautan'            => trim($this->request->getVar('tautan', $this->filter)),
                 'deskripsi'         => $this->request->getVar('deskripsi', $this->filter),
             ];
