@@ -92,6 +92,7 @@ $routes->group('data-produktif', ['filter' => 'Superadmin'], static function ($r
     $routes->get('edit/(:segment)', 'Produktif::edit/$1');
     $routes->post('update/(:segment)', 'Produktif::update/$1');
     $routes->post('delete/(:segment)', 'Produktif::delete/$1');
+    $routes->post('delete-image/(:segment)', 'Produktif::deleteImg/$1');
 });
 
 /*

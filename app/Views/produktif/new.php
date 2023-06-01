@@ -13,7 +13,34 @@
                         <?= csrf_field(); ?>
                         <div class="row">
                             <div class="col-lg-6">
-                            <div class="mb-3">
+                                <div class="mb-3">
+                                    <div class="col-md-6 position-relative">
+                                        <img src="<?= base_url('assets/img/default.png') ?>" class="w-100 h-100 img-style <?= validation_show_error('img') ? 'border border-danger' : '' ?>" id="frame">
+                                        <div class="position-absolute" style="bottom:0px;right:0px">
+                                            <button class="btn btn-secondary rounded-circle" style="padding:10px" type="button" data-bs-toggle="modal" data-bs-target="#option">
+                                                <i class="fa-solid fa-camera fa-xl"></i>
+                                            </button>
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="option" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered">
+                                                    <div class="modal-content">
+                                                        <div class="modal-body">
+                                                            <div data-bs-dismiss="modal">
+                                                                <input type="file" class="form-control" name="img" accept="image/*" onchange="preview()">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="<?= validation_show_error('img') ? 'is-invalid' : '' ?>">
+                                    </span>
+                                    <div class="invalid-feedback">
+                                        <?= str_replace('img,', 'gambar ', validation_show_error('img')) ?>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
                                     <label for="id_kategori" class="form-label">Kategori</label>
                                     <select class="form-select <?= validation_show_error('id_kategori') ? 'is-invalid' : '' ?>" id="id_kategori" name="id_kategori">
                                         <option value="">~Pilih</option>
