@@ -116,13 +116,7 @@
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="status" class="form-label">Gambar Kegiatan</label>
-                                                    <input type="file" class="form-control mb-1" name="img" accept="image/*" onchange="preview()">
-                                                    <span class="<?= validation_show_error('img') ? 'is-invalid' : '' ?>">
-                                                    </span>
-                                                    <img src="<?= base_url('assets/img/default.png') ?>" class="w-100 h-100 img-style <?= validation_show_error('img') ? 'border border-danger' : '' ?>" id="frame">
-                                                    <div class="invalid-feedback">
-                                                        <?= str_replace('img,', 'gambar ', validation_show_error('img')) ?>
-                                                    </div>
+                                                    <input type="file" class="form-control mb-1" name="img" accept="image/*">
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
