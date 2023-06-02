@@ -34,7 +34,7 @@
                                         <img src="<?= $img ?>" class="w-100 h-100 img-style <?= validation_show_error('img') ? 'border border-danger' : '' ?>" id="frame">
                                         <div class="position-absolute" style="bottom:0px;right:0px">
                                             <button class="btn btn-secondary rounded-circle" style="padding:8px 10px" type="button" data-bs-toggle="modal" data-bs-target="#option">
-                                                <i class="fa-solid fa-pen fa-lg"></i>
+                                                <i class="fa-solid fa-camera fa-lg"></i>
                                             </button>
                                             <!-- Modal -->
                                             <div class="modal fade" id="option" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
