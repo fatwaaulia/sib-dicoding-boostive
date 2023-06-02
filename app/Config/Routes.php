@@ -74,13 +74,6 @@ $routes->group('profile', ['filter' => 'Auth'], static function ($routes) {
 });
 
 // == Role - Superadmin ==
-$routes->group('users', ['filter' => 'Superadmin'], static function ($routes) {
-    $routes->get('/', 'Users::index');
-    $routes->get('edit/(:segment)', 'Users::edit/$1');
-    $routes->post('update/(:segment)', 'Users::update/$1');
-    $routes->post('delete/(:segment)', 'Users::delete/$1');
-    $routes->post('delete-image/(:segment)', 'Users::deleteImg/$1');
-});
 $routes->group('pengajuan-kontribusi', ['filter' => 'Superadmin'], static function ($routes) {
     $routes->get('/', 'Kontribusi::index');
     $routes->post('update/(:segment)', 'Kontribusi::update/$1');

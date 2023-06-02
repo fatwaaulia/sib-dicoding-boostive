@@ -17,14 +17,14 @@ $user = model('Users')->where('id', $user_session['id'])->first();
 					[
 						'text'    => 'Dashboard',
 						'url'     => 'dashboard',
-						'icon'    => 'fa-solid fa-house',
+						'icon'    => 'fa-solid fa-chart-line',
 						'role'    => [1, 2, 3]
 					],
 					// SUPERADMIN
 					[
-						'text'    => 'Kelola Pengguna',
-						'url'     => 'users',
-						'icon'    => 'fa-solid fa-user-group',
+						'text'    => 'Home',
+						'url'     => ' ',
+						'icon'    => 'fa-solid fa-house',
 						'role'    => [1]
 					],
 					[
