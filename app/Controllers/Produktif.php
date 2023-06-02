@@ -40,6 +40,7 @@ class Produktif extends BaseController
         $rules = [
             'id_kategori'   => 'required',
             'nama'          => "required|is_unique[$this->base_name.nama]",
+            'img'           => 'max_size[img,1024]|ext_in[img,png,jpg,jpeg]',
             'tautan'        => 'required',
             'deskripsi'     => 'required',
         ];
@@ -105,6 +106,7 @@ class Produktif extends BaseController
         $rules = [
             'id_kategori'   => 'required',
             'nama'          => "required|is_unique[$this->base_name.nama,id,$id]",
+            'img'           => 'max_size[img,1024]|ext_in[img,png,jpg,jpeg]',
             'tautan'        => 'required',
             'deskripsi'     => 'required',
         ];

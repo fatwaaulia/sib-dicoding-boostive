@@ -110,9 +110,24 @@ class Kontribusi extends BaseController
 
         $rules = [
             'status'    => 'required',
+            'img'       => 'max_size[img,1024]|ext_in[img,png,jpg,jpeg]',
         ];
         if (! $this->validate($rules)) {
-            return redirect()->back()->withInput();
+            $error_status = service('validation')->getError('status') ?? '';
+            $error_img = str_replace('img,', 'gambar ', service('validation')->getError('img')) ?? '';
+            $errors = $error_status . '<br>' . $error_img;
+            return redirect()->to($this->base_route)
+            ->with('message',
+            "<script>
+                Swal.fire({
+                position: 'top-end',
+                icon: 'error',
+                title: '" . $errors . "',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                })
+            </script>");
         }else {
             $status = $this->request->getVar('status', $this->filter);
             if ($status == 'Diterima') {
