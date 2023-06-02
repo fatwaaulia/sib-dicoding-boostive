@@ -30,16 +30,10 @@
                                 <img src="<?= base_url('assets/img/show.png') ?>" class="position-absolute" id="eye_password">
 							</div>
 						</div>
-						<div class="mb-3">
+						<div>
 							<button class="btn btn-primary d-grid w-100" type="submit">Masuk</button>
 						</div>
 					</form>
-					<div class="text-center">
-						<span>Belum punya akun?</span>
-						<a href="<?= base_url('register') ?>">
-						<span>Daftar</span>
-						</a>
-					</div>
 				</div>
 			</div>
 		</div>
