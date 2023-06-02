@@ -35,7 +35,7 @@
                 <span class="bg-red-100 text-red-800 text-md font-medium mr-2 px-2.5 py-0.5 rounded-full">Belum Dikategorikan</span>
                 <div class="divider"></div>
                 <div class="flex flex-wrap">
-                    <a class='flex'href=""><p class="mr-2">Usulkan</p>
+                    <a class='flex' href="<?= base_url('formulir-kontribusi') ?>"><p class="mr-2">Usulkan</p>
                         <img src="<?= base_url('assets/img/category-icon/usulkan-icon.png') ?>">
                     </a>
                 </div>
