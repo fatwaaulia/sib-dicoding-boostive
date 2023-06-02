@@ -16,6 +16,7 @@
                             <th>Nama Kegiatan</th>
                             <th>Kontributor</th>
                             <th>Status</th>
+                            <th>Tanggal</th>
                             <th>Opsi</th>
                         </tr>
                     </thead>
@@ -37,6 +38,10 @@
                             </td>
                             <td><?= $v['nama_kontributor'] . '<br>' . $v['email_kontributor'] ?></td>
                             <td><?= $v['status'] ?></td>
+                            <td>
+                                <?= date('d-m-Y', strtotime($v['created_at'])) ?> <br>
+                                <?= date('H:i:s', strtotime($v['created_at'])) ?>
+                            </td>
                             <td>
                                 <a href="#" data-bs-toggle="modal" data-bs-target="#periksa_pengajuan_kontribusi<?= model('Env')->encode($v['id']) ?>">
                                     <i class="fa-regular fa-pen-to-square fa-lg"></i>

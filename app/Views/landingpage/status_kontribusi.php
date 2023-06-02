@@ -67,6 +67,7 @@ setTimeout(() => {
                                 <th>Kategori</th>
                                 <th>Nama Kegiatan</th>
                                 <th>Status</th>
+                                <th>Tanggal</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -96,6 +97,10 @@ setTimeout(() => {
                                     echo 'Diterima';
                                 }
                                 ?>
+                                </td>
+                                <td>
+                                    <?= date('d-m-Y', strtotime($v['created_at'])) ?> <br>
+                                    <?= date('H:i:s', strtotime($v['created_at'])) ?>
                                 </td>
                             </tr>
                             <?php endforeach; ?>

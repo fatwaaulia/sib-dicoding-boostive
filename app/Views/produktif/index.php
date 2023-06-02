@@ -22,6 +22,7 @@
                             <th>Kategori</th>
                             <th>Nama Kegiatan</th>
                             <th>Kontributor</th>
+                            <th>Tanggal</th>
                             <th>Opsi</th>
                         </tr>
                     </thead>
@@ -42,6 +43,10 @@
                                 </a>
                             </td>
                             <td><?= $v['nama_kontributor'] . '<br>' . $v['email_kontributor'] ?></td>
+                            <td>
+                                <?= date('d-m-Y', strtotime($v['created_at'])) ?> <br>
+                                <?= date('H:i:s', strtotime($v['created_at'])) ?>
+                            </td>
                             <td>
                                 <a href="<?= $base_route . '/edit/' . model('Env')->encode($v['id']) ?>">
                                     <i class="fa-regular fa-pen-to-square fa-lg me-2"></i>
