@@ -29,7 +29,7 @@ class Database extends Config
         'hostname' => 'localhost',
         'username' => 'root',
         'password' => '',
-        'database' => 'ci4',
+        'database' => 'sib_dicoding_boostive',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,
