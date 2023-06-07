@@ -5,7 +5,7 @@
         <div class="navbar bg-white fixed z-10 border-solid border-2 border-gray-100 w-screen">
             <div>
                 <a class="btn btn-ghost normal-case text-xl">
-                <img src="<?= base_url('assets/img/logo.png') ?>" class="w-40 sm:w-32 md:w-36" alt="logo.png">
+                <img src="<?= base_url('assets/img/logo.png') ?>" alt="logo.png" style="height:40px">
             </a>
         </div>
         <div class="w-auto">
