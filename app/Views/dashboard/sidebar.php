@@ -22,7 +22,7 @@ $user = model('Users')->where('id', $user_session['id'])->first();
 					],
 					// SUPERADMIN
 					[
-						'text'    => 'Home',
+						'text'    => 'Beranda',
 						'url'     => ' ',
 						'icon'    => 'fa-solid fa-house',
 						'role'    => [1]
