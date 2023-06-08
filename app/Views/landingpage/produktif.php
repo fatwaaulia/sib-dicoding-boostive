@@ -25,23 +25,44 @@
   <section class="px-6 pb-12 md:px-12">
     <h1 class="text-3xl md:text-4xl xl:text-5xl font-bold tracking-tight mb-8 text-center">Tools Populer</h1>
     <div class="grid grid-cols-2 max-[600px]:grid-cols-1 xl:grid-cols-4 gap-x-10 gap-y-8">
-    <?php for ($i=0; $i <4 ; $i++) : ?>
+    <?php 
+    $produktif_populer = model('Produktif')->orderBy('view', 'DESC')->findAll(4);
+    foreach ($produktif_populer as $v)  :
+    $kategori_produktif_populer = model('KategoriProduktif')->where('id', $v['id_kategori'])->first()['nama'];
+    ?>
             <div class="card bg-base-100 shadow-xl border-solid border-t-0 border-x-0 border-2 border-gray-200">
             <figure class='max-h-52'>
-                <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=455&q=80"/>
+            <?php
+                if ($v['img']) {
+                    $img = base_url('assets/img/produktif/' . $v['img']);
+                } else {
+                    $img = base_url('assets/img/default.png');
+                }
+            ?>
+                <img src="<?= $img ?>"/>
             </figure>
             <div class="card-body items-center text-center">
-                <h2 class="card-title">Tiny Thinkers</h2>
-                <p class="mb-0">Daftar aktivitas/permainan online & offline untuk Computational Thinking anak-anak mulai usia 4 tahun ke atas</p>
-                <span class="bg-red-100 text-red-800 text-md font-medium mr-2 px-2.5 py-0.5 rounded-full">SD</span>
+                <h2 class="card-title"><?= $v['nama'] ?></h2>
+                <style>
+                .lc-2 {
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2 !important;
+                    max-height: 50px;
+                }   
+                </style>
+                <p class="mb-0 lc-2"><?= $v['deskripsi'] ?></p>
+                <span class="bg-green-100 text-green-800 text-md font-medium mr-2 px-2.5 py-0.5 rounded-full"><?= $kategori_produktif_populer ?></span>
                 <div class="divider"></div>
                 <div class="flex flex-wrap">
-                    <a class='flex'href=""><p class="mr-2">Detail</p>
+                    <a class='flex'href="<?= base_url('produktif/') . $kategori_produktif_populer . '/' . $v['slug'] ?>"><p class="mr-2">Detail</p>
                         <img src="<?= base_url('assets/img/category-icon/detail-icon.png') ?>">
                     </a>
                 </div>
             </div>
         </div>
-        <?php endfor;?>
+        <?php endforeach;?>
         </div>
   </section>
