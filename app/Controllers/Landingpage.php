@@ -42,6 +42,16 @@ class Landingpage extends BaseController
         return view('landingpage/header', $data);
     }
 
+    public function aksesTautan($slug)
+    {
+        $produktif_model = model('Produktif');
+        $produktif = $produktif_model->where('slug', $slug)->first();
+        $view = $produktif['view'] + 1;
+        $produktif_model->update($produktif['id'], ['view' => $view]);
+
+        return redirect()->to($produktif['tautan']);
+    }
+
     public function tentangKami()
     {
         $data['title'] = 'Tentang Kami';

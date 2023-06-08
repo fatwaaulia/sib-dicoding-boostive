@@ -39,6 +39,7 @@ $routes->get('/', 'Landingpage::beranda');
 $routes->get('produktif', 'Landingpage::produktif');
 $routes->get('produktif/(:segment)', 'Landingpage::kategoriProduktif/$1');
 $routes->get('produktif/(:segment)/(:segment)', 'Landingpage::detailProduktif/$1/$2');
+$routes->get('akses-tautan/(:segment)', 'Landingpage::aksesTautan/$1');
 $routes->get('tentang-kami', 'Landingpage::tentangKami');
 
 $routes->get('formulir-kontribusi', 'Kontribusi::new');

@@ -18,8 +18,8 @@
             <h1 class="text-lg font-semibold">Deskripsi</h1>
             <p class="text-justify"><?= $produktif['deskripsi'] ?></p>
 
-            <h1 class="text-lg font-semibold mt-4">Link Kegiatan :</h1>
-            <a href="<?= $produktif['tautan'] ?>">
+        <h1 class="text-lg font-semibold mt-4">Link Kegiatan :</h1>
+            <a href=" <?= base_url('akses-tautan/') . $produktif['slug'] ?>">
                 <p class="text-justify"><?= $produktif['tautan'] ?></p>
             </a>
         </div>
