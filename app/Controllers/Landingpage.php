@@ -31,9 +31,11 @@ class Landingpage extends BaseController
         return view('landingpage/header', $data);
     }
 
-    public function detailProduktif()
+    public function detailProduktif($kategori, $slug)
     {
         $data['title'] = 'Detail Produktif';
+        $data['kategori'] = $kategori;
+        $data['produktif'] = model('Produktif')->where('slug', $slug)->first();
         
         $data['content'] = view('landingpage/detail_produktif', $data);
         $data['navbar_footer'] = view('landingpage/navbar_footer', $data);
