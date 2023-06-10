@@ -26,12 +26,7 @@
         peer-checked:translate-x-0 transition duration-500 sm:w-auto sm:static sm:hidden">
         <ul class="max-h-40 font-semibold h-screen p-3 flex flex-col gap-5 sm:h-auto sm:flex-row sm:bg-inherit">
             <li><a href="<?= base_url() ?>">Beranda</a></li>
-            <div class="dropdown" id="dropdown">
-                <label for="dropdown" tabindex="0">Produktif</label>
-                <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
-                    <li><a href="<?= base_url('produktif?kategori=Semua Usia') ?>">Semua Usia</a></li>
-                </ul>
-            </div>
+            <li><a href="<?= base_url('produktif?kategori=Semua Usia') ?>">Semua Usia</a></li>
             <li><a href="<?= base_url('tentang-kami') ?>">Tentang Kami</a></li>
             
         </ul>

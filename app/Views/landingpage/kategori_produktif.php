@@ -1,8 +1,8 @@
 <div class="relative">
     <div class="hero pt-20 pb-12 md:px-12 text-center lg:text-left" style="background-color: #191D25;">
         <div class="hero-content text-left text-primary-content">
-        <div class="grid md:grid-cols-2 gap-12 flex items-center justify-center mb-4">
-            <div class="mt-4 lg:mt-0 md:mb-8 xl:ml-40">
+        <div class="grid md:grid-cols-2 flex items-center justify-center mb-6">
+            <div class="mb-12 mr-[-30px] md:mt-0 md:mb-8 xl:ml-40">
                 <?php 
                 $segment_2 = str_replace('%20', ' ', service('uri')->getSegment(2));
                 $kategori = model('KategoriProduktif')->where('nama', $segment_2)->first(); 
