@@ -1,11 +1,11 @@
 <!-- navbar disini -->
-<div class="flex flex-col min-h-screen">
+
 
     <nav>
         <div class="navbar bg-white fixed z-10 border-solid border-2 border-gray-100 w-screen">
             <div>
-                <a class="btn btn-ghost normal-case text-xl">
-                <img src="<?= base_url('assets/img/logo.png') ?>" alt="logo.png" style="height:40px">
+                <a class="btn btn-ghost normal-case text-xl" href="/">
+                <img src="<?= base_url('assets/img/logo.png') ?>" alt="logo.png" style="max-height:40px" loading="lazy">
             </a>
         </div>
         <div class="w-auto">
@@ -19,11 +19,11 @@
                 <li><a href="<?= base_url('tentang-kami') ?>" class="text-m">Tentang Kami</a></li>
             </ul>
         </div>
-        <input type="checkbox" class="peer hidden" id="cek">
-        <label for="cek" class="absolute right-4 sm:hidden btn btn-outline py-3 px-4 rounded
+        <input type="checkbox" style="display: none;" class="peer" id="cek">
+        <label for="cek" id='label' class="absolute right-4 sm:hidden btn btn-outline py-3 px-4 rounded
         focus:outline-none hover:bg-gray-200 hover:cursor-pointer">☰</label>
-        <div class="rounded-box rounded-l-none absolute left-0 top-[60px] w-1/3 bg-white -translate-x-[41rem] border-solid border-black border border-opacity-10
-        peer-checked:translate-x-0 transition duration-500 sm:w-auto sm:static sm:hidden">
+        <div id="navbar_phone" class="rounded-box rounded-l-none absolute left-0 top-[60px] w-1/3 bg-white -translate-x-[41rem] border-solid border-black border border-opacity-10
+        peer-checked:translate-x-0 transition duration-500 sm:w-auto sm:static">
         <ul class="max-h-40 font-semibold h-screen p-3 flex flex-col gap-5 sm:h-auto sm:flex-row sm:bg-inherit">
             <li><a href="<?= base_url() ?>">Beranda</a></li>
             <li><a href="<?= base_url('produktif?kategori=Semua Usia') ?>">Semua Usia</a></li>
@@ -33,6 +33,19 @@
     </div>
 </div>
 </nav>
+<style>
+  @media (max-width: 640px) {
+    #navbar_phone, #label{
+      display: block;
+    }
+  }
+
+  @media (min-width: 641px) {
+    #navbar_phone, #label{
+      display: none;
+    }
+  }
+</style>
 <!-- Akhir navbar -->
 
 
@@ -51,5 +64,5 @@
         </a> 
   </div>
 </footer>
-</div>
+
 <!-- akhir footer -->
