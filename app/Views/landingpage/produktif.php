@@ -23,7 +23,8 @@
 </section>
   <div class="divider"></div>
   <section class="px-6 pb-12 md:px-12">
-    <h1 class="text-3xl md:text-4xl xl:text-5xl font-bold tracking-tight mb-8 text-center">Tools Populer</h1>
+    <h1 class="text-3xl md:text-4xl xl:text-5xl font-bold tracking-tight text-center mb-4">Tools Populer</h1>
+    <p class="text-1lg md:text-2lg xl:text-3lg text-inherit font-regular text-center tracking-tight mb-8">Temukan pengetahuan baru dari tools populer</p>
     <div class="grid grid-cols-2 max-[600px]:grid-cols-1 xl:grid-cols-4 gap-x-10 gap-y-8">
     <?php 
     $produktif_populer = model('Produktif')->orderBy('view', 'DESC')->findAll(4);
