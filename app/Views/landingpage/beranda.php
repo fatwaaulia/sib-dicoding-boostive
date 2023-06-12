@@ -17,7 +17,37 @@
 </div>
 
 <section class="px-6 pb-12 md:px-12">
-    <h1 class="text-center text-2xl md:text-3xl font-bold text-red-800 tracking-tight mt-6 mb-8">Tahukah Kamu Manfaat Menjadi Orang Yang Produktif???</h1>
+    <h1 class="text-center text-2xl md:text-3xl font-semibold tracking-tight mt-8 mb-8">Fitur Boostive</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 sm:place-items-center gap-x-5 gap-y-8">
+        <div class="card w-96 bg-base-100 shadow-xl">
+            <div class="card-body rounded-tl-3xl rounded-br-3xl bg-blue-200">
+                <h1 class="card-title text-blue-800">Produktivitas</h1>
+            </div>
+            <div class="card-body items-center text-center">
+                <p class="text-justify">Banyak tools produktif yang tersedia, gunakanlah waktu luang anda untuk melakukan hal-hal positif dan jadilah produktif!</p>
+                <div class="card-actions">
+                    <button class="btn btn-info rounded-full">Selengkapnya</button>
+                </div>
+            </div>
+        </div>
+        <div class="card w-96 bg-base-100 shadow-xl">
+            <div class="card-body rounded-tl-3xl rounded-br-3xl bg-red-200">
+                <h1 class="card-title text-red-800">Kontribusi Data</h1>
+            </div>
+            <div class="px-4">
+                <div class="card-body items-center text-center">
+                    <p class="text-justify">Kontribusi data disediakan untuk anda dapat ikut memberikan rekomendasi tools produktif pada boostive</p>
+                    <div class="card-actions">
+                        <button class="btn btn-error rounded-full">Selengkapnya</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="px-6 pb-12 md:px-12">
+    <h1 class="text-center text-2xl md:text-3xl font-bold text-red-800 tracking-tight mt-2 mb-8">Tahukah Kamu Manfaat Menjadi Orang Yang Produktif???</h1>
     <ol class="px-4 list-decimal grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-8">
         <li class="text-lg font-bold">
             Pintar Mengatur Waktu
