@@ -96,7 +96,6 @@ class Users extends BaseController
             ->with('message',
             "<script>
                 Swal.fire({
-                position: 'top-end',
                 icon: 'success',
                 title: 'Perubahan disimpan',
                 showConfirmButton: false,
@@ -121,7 +120,6 @@ class Users extends BaseController
         ->with('message',
         "<script>
             Swal.fire({
-            position: 'top-end',
             icon: 'success',
             title: 'Data berhasil dihapus',
             showConfirmButton: false,
@@ -144,7 +142,6 @@ class Users extends BaseController
         ->with('message',
         "<script>
             Swal.fire({
-            position: 'top-end',
             icon: 'success',
             title: 'Foto profil dihapus',
             showConfirmButton: false,
@@ -213,7 +210,6 @@ class Users extends BaseController
             ->with('message',
             "<script>
                 Swal.fire({
-                position: 'top-end',
                 icon: 'success',
                 title: 'Perubahan disimpan',
                 showConfirmButton: false,
@@ -249,7 +245,6 @@ class Users extends BaseController
                 ->with('message',
                 "<script>
                     Swal.fire({
-                    position: 'top-end',
                     icon: 'success',
                     title: 'Password berhasil diubah, silahkan login kembali',
                     showConfirmButton: false,
@@ -263,7 +258,6 @@ class Users extends BaseController
                 ->with('message',
                 "<script>
                     Swal.fire({
-                    position: 'top-end',
                     icon: 'error',
                     title: 'Password saat ini salah!',
                     showConfirmButton: false,
@@ -278,7 +272,6 @@ class Users extends BaseController
             ->with('message',
             "<script>
                 Swal.fire({
-                position: 'top-end',
                 icon: 'error',
                 title: 'Password setidaknya harus berisi 8 karakter!',
                 showConfirmButton: false,
@@ -303,7 +296,6 @@ class Users extends BaseController
         ->with('message',
         "<script>
             Swal.fire({
-            position: 'top-end',
             icon: 'success',
             title: 'Foto profil dihapus',
             showConfirmButton: false,

@@ -66,7 +66,6 @@ class Kontribusi extends BaseController
                 ->with('message',
                 "<script>
                     Swal.fire({
-                    position: 'top-end',
                     icon: 'error',
                     title: 'Jawaban penjumlahan kamu kurang tepat!',
                     showConfirmButton: true,
@@ -92,7 +91,6 @@ class Kontribusi extends BaseController
                 ->with('message',
                 "<script>
                     Swal.fire({
-                    position: 'top-end',
                     icon: 'success',
                     title: 'Terimakasih, kontribusi Anda sedang ditinjau',
                     showConfirmButton: true,
@@ -120,7 +118,6 @@ class Kontribusi extends BaseController
             ->with('message',
             "<script>
                 Swal.fire({
-                position: 'top-end',
                 icon: 'error',
                 title: '" . $errors . "',
                 showConfirmButton: false,
@@ -161,7 +158,6 @@ class Kontribusi extends BaseController
             ->with('message',
             "<script>
                 Swal.fire({
-                position: 'top-end',
                 icon: 'success',
                 title: 'Kontribusi $status',
                 showConfirmButton: false,

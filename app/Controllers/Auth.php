@@ -69,22 +69,17 @@ class Auth extends BaseController
                         $data['button_name'] = 'Aktivasi Sekarang';
                         $message = view('auth/email_template', $data);
 
-                        // echo $message;
-                        // die;
-
                         $email = service('email');
                         $email->setFrom($email->fromEmail, $email->fromName);
                         $email->setTo($toEmail);
                         $email->setSubject($subject);
                         $email->setMessage($message);
 
-                        // die;
                         if ($email->send()) {
                             return redirect()->to(base_url() . 'login')
                             ->with('message',
                             "<script>
                                 Swal.fire({
-                                position: 'top-end',
                                 icon: 'info',
                                 title: 'Periksa email Anda untuk aktivasi akun!',
                                 })
@@ -94,7 +89,6 @@ class Auth extends BaseController
                             ->with('message',
                             "<script>
                                 Swal.fire({
-                                position: 'top-end',
                                 icon: 'info',
                                 title: 'Permintaan gagal diproses, silakan coba lagi!',
                                 })
@@ -107,7 +101,6 @@ class Auth extends BaseController
                 ->with('message',
                 "<script>
                     Swal.fire({
-                    position: 'top-end',
                     icon: 'error',
                     title: 'Email atau password salah!',
                     showConfirmButton: false,
@@ -164,9 +157,6 @@ class Auth extends BaseController
                 $data['button_name'] = 'Reset Password';
                 $message = view('auth/email_template', $data);
 
-                // echo $message;
-                // die;
-
                 $email = service('email');
                 $email->setFrom($email->fromEmail, $email->fromName);   
                 $email->setTo($toEmail);
@@ -178,7 +168,6 @@ class Auth extends BaseController
                     ->with('message',
                     "<script>
                         Swal.fire({
-                        position: 'top-end',
                         icon: 'info',
                         title: 'Permintaan telah dikirim, Silakan periksa email Anda!',
                         })
@@ -188,7 +177,6 @@ class Auth extends BaseController
                     ->with('message',
                     "<script>
                         Swal.fire({
-                        position: 'top-end',
                         icon: 'info',
                         title: 'Permintaan gagal diproses, silakan coba lagi!',
                         })
@@ -199,7 +187,6 @@ class Auth extends BaseController
                 ->with('message',
                 "<script>
                     Swal.fire({
-                    position: 'top-end',
                     icon: 'error',
                     title: 'Email tidak ditemukan!',
                     showConfirmButton: false,
@@ -255,9 +242,6 @@ class Auth extends BaseController
             $data['button_name'] = 'Login';
             $message = view('auth/email_template', $data);
 
-            // echo $message;
-            // die;
-
             $email = service('email');
             $email->setFrom($email->fromEmail, $email->fromName);   
             $email->setTo($toEmail);
@@ -269,7 +253,6 @@ class Auth extends BaseController
             ->with('message',
             "<script>
                 Swal.fire({
-                position: 'top-end',
                 icon: 'success',
                 title: 'Password berhasil diubah, silakan login',
                 })
@@ -301,9 +284,6 @@ class Auth extends BaseController
             $data['button_name'] = 'Tombol';
             $message = view('auth/email_template', $data);
 
-            // echo $message;
-            // die;
-
             $email = service('email');
             $email->setFrom($email->fromEmail, $email->fromName);   
             $email->setTo($toEmail);
@@ -315,20 +295,15 @@ class Auth extends BaseController
                 ->with('message',
                 "<script>
                     Swal.fire({
-                    position: 'top-end',
                     icon: 'info',
                     title: 'Permintaan telah dikirim, silakan periksa email Anda!',
                     })
                 </script>");
             } else {
-                // $email_error = $email->printDebugger(['headers']);
-                // print_r($email_error);
-                // die;
                 return redirect()->to(base_url())
                 ->with('message',
                 "<script>
                     Swal.fire({
-                    position: 'top-end',
                     icon: 'info',
                     title: 'Permintaan gagal diproses, silakan coba lagi!',
                     })
@@ -339,7 +314,6 @@ class Auth extends BaseController
             ->with('message',
             "<script>
                 Swal.fire({
-                position: 'top-end',
                 icon: 'error',
                 title: 'Gagal validasi!',
                 showConfirmButton: false,

@@ -73,7 +73,6 @@ class Produktif extends BaseController
                 ->with('message',
                 "<script>
                     Swal.fire({
-                    position: 'top-end',
                     icon: 'success',
                     title: 'Data berhasil ditambahkan',
                     showConfirmButton: false,
@@ -139,7 +138,6 @@ class Produktif extends BaseController
                 ->with('message',
                 "<script>
                     Swal.fire({
-                    position: 'top-end',
                     icon: 'success',
                     title: 'Perubahan disimpan',
                     showConfirmButton: false,
@@ -160,7 +158,6 @@ class Produktif extends BaseController
         ->with('message',
         "<script>
             Swal.fire({
-            position: 'top-end',
             icon: 'success',
             title: 'Data berhasil dihapus',
             showConfirmButton: false,
@@ -183,7 +180,6 @@ class Produktif extends BaseController
         ->with('message',
         "<script>
             Swal.fire({
-            position: 'top-end',
             icon: 'success',
             title: 'Gambar dihapus',
             showConfirmButton: false,
