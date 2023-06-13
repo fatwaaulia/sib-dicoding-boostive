@@ -1,7 +1,7 @@
 
 
 
-  <div class="h-10">content</div>
+  <div class="h-10"></div>
   <section class="px-6 py-12 md:px-12 ">
     <h1 class="text-3xl md:text-4xl xl:text-5xl font-bold tracking-tight mb-8">Kategori</h1>
     <div class="grid grid-cols-2 max-[425px]:grid-cols-1 lg:grid-cols-3 gap-x-10 gap-y-8">
