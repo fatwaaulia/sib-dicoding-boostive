@@ -16,6 +16,27 @@
     </div>
 </div>
 
+<section class="w-full flex flex-col flex-wrap items-center gap-32 mt-10 px-6 pb-12 md:px-12">
+    <div class="max-w-[1200px] md:grid md:grid-cols-2 md:gap-5">
+        <div class="flex justify-center">
+            <img src="<?= base_url('assets/img/beranda/tips-1.png') ?>" alt="">
+        </div>
+        <div class="flex flex-col justify-center mt-6">
+            <h2 class="text-lg font-semibold">Judul</h2>
+            <p class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium officia, eligendi dolores impedit temporibus, laborum consequatur quidem nihil aut beatae assumenda omnis! Unde ab quis earum voluptatibus cumque amet eligendi.</p>
+        </div>
+    </div>
+    <div class="max-w-[1200px] md:grid md:grid-cols-2 md:gap-5">
+        <div class="flex justify-center md:col-start-2">
+            <img src="<?= base_url('assets/img/beranda/tips-1.png') ?>" alt="">
+        </div>
+        <div class="flex flex-col justify-center mt-6 md:col-start-1 md:row-start-1">
+            <h2 class="text-lg font-semibold">Judul</h2>
+            <p class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium officia, eligendi dolores impedit temporibus, laborum consequatur quidem nihil aut beatae assumenda omnis! Unde ab quis earum voluptatibus cumque amet eligendi.</p>
+        </div>
+    </div>
+</section>
+
 <section class="px-6 pb-12 md:px-12">
     <h1 class="text-center text-2xl md:text-3xl font-semibold tracking-tight mt-8 mb-8">Fitur Boostive</h1>
     <div class="grid grid-cols-1 md:grid-cols-2 sm:place-items-center gap-x-5 gap-y-8">
@@ -45,6 +66,8 @@
         </div>
     </div>
 </section>
+
+
 
 <section class="px-6 pb-12 md:px-12">
     <h1 class="text-center text-2xl md:text-3xl font-bold text-red-800 tracking-tight mt-2 mb-8">Tahukah Kamu Manfaat Menjadi Orang Yang Produktif???</h1>
