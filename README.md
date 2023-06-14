@@ -2,7 +2,7 @@
 
 ## Apa Itu Boostive?
 
-Boostive adalah sebuah aplikasi solusi utilitas yang dirancang untuk meningkatkan kreativitas dan produktivitas penggunanya. Aplikasi ini menyediakan rekomendasi aplikasi dan website bermanfaat yang dapat membantu pengguna menemukan sumber daya yang relevan dengan minat dan kebutuhan mereka. Selain itu, Boostive juga mengundang pengguna untuk berkontribusi dalam menyajikan data di dalam website kami ini, sehingga memungkinkan kolaborasi untuk meningkatkan pengalaman pengguna secara keseluruhan.
+Boostive adalah sebuah aplikasi berbasis website solusi utilitas yang dirancang untuk meningkatkan kreativitas dan produktivitas penggunanya. Website ini menyediakan rekomendasi aplikasi dan website bermanfaat yang dapat membantu pengguna menemukan sumber daya yang relevan dengan minat dan kebutuhan mereka. Selain itu, Boostive juga mengundang pengguna untuk berkontribusi dalam menyajikan data di dalam website kami ini, sehingga memungkinkan kolaborasi untuk meningkatkan pengalaman pengguna secara keseluruhan.
 
 ## Fitur
 
