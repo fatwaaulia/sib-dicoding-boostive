@@ -53,7 +53,7 @@
 
 
 <!-- footer disini -->
-<footer class="footer p-10 bg-base-200 text-base-content">
+<footer class="footer px-10 py-5 bg-base-200 text-base-content">
   <div>
     <span class="footer-title">Features</span> 
     <a href="<?= base_url() ?>" class="link link-hover">Beranda</a> 

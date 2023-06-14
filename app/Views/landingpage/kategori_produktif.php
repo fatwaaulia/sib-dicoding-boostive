@@ -7,7 +7,7 @@
                 $segment_2 = str_replace('%20', ' ', service('uri')->getSegment(2));
                 $kategori = model('KategoriProduktif')->where('nama', $segment_2)->first(); 
                 ?>
-                <h1 class="text-3xl md:text-3xl xl:text-4xl font-bold tracking-tight text-center">
+                <h1 class="text-2xl md:text-3xl xl:text-4xl font-bold tracking-tight text-center">
                     <?= $kategori['deskripsi'] ?>
                     (<?= $kategori['nama'] ?>)
                 </h1>
@@ -23,13 +23,13 @@
         </div>
         
     </div>
-    <section class="z-10 mt-[-350px] sm:mt-[-310px] md:mt-[-150px] mx-4 sm:mx-6  md:mx-12">
-        <div class="grid grid-cols-2 max-[425px]:grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-4">
-            <div href="" class="card bg-base-100 shadow-xl border-solid border-t-0 border-x-0 border-2 border-gray-200">
+    <section class="z-10 mt-[-350px] sm:mt-[-310px] md:mt-[-150px] mx-4 sm:mx-6  md:mx-12 mb-6">
+        <div class="grid grid-cols-2 max-[500px]:grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-4">
+            <div class="card bg-base-100 shadow-xl border-solid border-t-0 border-x-0 border-2 border-gray-200">
             <figure class='mx-4 my-8 h-36'>
                 <img src="<?= base_url('assets/img/category-icon/add-cat-icon.png') ?>"/>
             </figure>
-            <div class="card-body items-center text-center">
+            <div class="items-center card-body text-center">
                 <h2 class="card-title">Tambah Produktif Baru</h2>
                 <p class="mb-0">Usulkan produktif baru untuk kategori Belum Terkategori</p>
                 <span class="bg-red-100 text-red-800 text-md font-medium mr-2 px-2.5 py-0.5 rounded-full">Belum Dikategorikan</span>
@@ -56,7 +56,7 @@
                 ?>
                 <img src="<?= $img ?>"/>
             </figure>
-            <div class="card-body items-center text-center">
+            <div class="items-center card-body text-center">
                 <style>
                 .lc-2 {
                     text-overflow: ellipsis;
