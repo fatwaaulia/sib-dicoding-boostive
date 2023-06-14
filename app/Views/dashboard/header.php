@@ -5,9 +5,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="description" content="Akses semua tools produktif dengan mudah yang dapat meningkatkan kreatifitasmu.">
+    <meta property="og:image" content="<?= base_url() . 'favicon.png' ?>">
+    <meta property="og:title" content="<?= isset($title) ? $title . ' | ' . model('Env')->webName() : model('Env')->webName() ?>" />
+    <meta property="og:description" content="Akses semua tools produktif dengan mudah yang dapat meningkatkan kreatifitasmu.">
+    
     <link rel="shortcut icon" href="<?= base_url() . 'favicon.png' ?>" type="image/x-icon">
-
     <title><?= isset($title) ? $title . ' | ' . model('Env')->webName() : model('Env')->webName() ?></title>
 
     <!-- Source Support -->
