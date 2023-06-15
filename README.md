@@ -15,10 +15,10 @@ Boostive mendorong pengguna untuk berkontribusi dengan menyajikan data di dalam 
 
 ## Anggota Kami
 
-1. Fatwa Aulia F082XB194 (Back-End)
-2. Muhammad Adil Raja F070XB118 (Front-End) 
-3. Hafizhuddin Akmal F085XB141 (Front-End)
-4. Jessica Kristina Hutasoit F048YB086 (UI/UX Designer)
+1. Fatwa Aulia - F082XB194 (Back-End)
+2. Muhammad Adil Raja - F070XB118 (Front-End) 
+3. Hafizhuddin Akmal - F085XB141 (Front-End)
+4. Jessica Kristina Hutasoit - F048YB086 (UI/UX Designer)
 
 ## Untuk Apa Boostive Dibuat
 
