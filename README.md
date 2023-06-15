@@ -15,12 +15,25 @@ Boostive mendorong pengguna untuk berkontribusi dengan menyajikan data di dalam 
 
 ## Anggota Kami
 
-1. Fatwa Aulia (Back-End)
-2. Muhammad Adil Raja (Front-End)
-3. Hafizhuddin Akmal (Front-End)
-4. Jessica Kristina Hutasoit (UI/UX Designer)
+1. Fatwa Aulia F082XB194 (Back-End)
+2. Muhammad Adil Raja F070XB118 (Front-End) 
+3. Hafizhuddin Akmal F085XB141 (Front-End)
+4. Jessica Kristina Hutasoit F048YB086 (UI/UX Designer)
 
 ## Untuk Apa Boostive Dibuat
 
 Boostive dibuat untuk memenuhi tugas akhir kami yang sedang menjalankan Studi Independen Cycle 4 di Dicoding.
 Kode Tim Kami adalah C23-M405
+
+## Plugins Yang Digunakan
+
+### Frontend
+1. Tailwind untuk landing page
+2. Boostrap untuk dashboard superadmin
+
+### Backend
+1. Codeigniter 4
+
+### UI/UX
+1. Figma
+2. DaisyUI
