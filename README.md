@@ -31,7 +31,7 @@ Kode Tim Kami adalah C23-M405
 3. Tailwind CSS (Landing Page)
 
 ### Backend
-1. MySql
+1. MySQL
 2. PHP (Framework Codeigniter 4)
 
 ### UI/UX
