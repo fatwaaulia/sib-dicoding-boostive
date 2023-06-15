@@ -1,6 +1,25 @@
+<style>
+    @keyframes showOpacity {
+        0% {
+            opacity: 0;
+            }
+        50% {
+            opacity: 0;
+            }
+        
+        100% {
+                opacity: 1;
+                }
+            }
+
+    #beranda, #fitur_boostive {
+        animation-name: showOpacity;
+        animation-duration: 1.2s;
+            }
+</style>
 <div class="hero px-6 pt-20 pb-12 md:px-12 text-center lg:text-left" style="background-color: #191D25;">
     <div class="hero-content text-left text-primary-content">
-        <div class="grid md:grid-cols-2 gap-12 flex items-center">
+        <div id="beranda" class="grid md:grid-cols-2 gap-12 flex items-center">
             <div class="mt-4 lg:mt-0">
                 <h1 class="text-3xl md:text-4xl xl:text-5xl font-bold tracking-tight mb-8">Yuk, berkenalan dengan BOOSTIVE dan salurkan Ide Produktif kamu</h1>
                 <p class="">Pilih kegiatan produktif kamu dan dapatkan ilmu baru dengan cara yan menyenangkan.</p>
@@ -16,7 +35,7 @@
     </div>
 </div>
 
-<section class="px-6 pb-12 md:px-12">
+<section id="fitur_boostive" class="px-6 pb-12 md:px-12">
     <h1 class="text-center text-2xl md:text-3xl font-semibold tracking-tight mt-8 mb-8">Fitur Boostive</h1>
     <div class="grid grid-cols-1 min-[900px]:grid-cols-2 place-items-center gap-x-8 gap-y-8">
         <div class="card w-80 sm:w-96 bg-base-100 shadow-xl">

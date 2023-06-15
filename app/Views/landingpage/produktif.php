@@ -1,8 +1,34 @@
 
+<style>
+        .lc-2 {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2 !important;
+            max-height: 50px;
+        }   
+    @keyframes showOpacity {
+        0% {
+            opacity: 0;
+            }
+        50% {
+            opacity: 0;
+            }
+        100%{
+            opacity: 1;
+            }
+            
+        }
 
+    #populer, #produktif {
+        animation-name: showOpacity;
+        animation-duration: 1.2s;
+            }
+</style>
 
-  <div class="h-10"></div>
-  <section class="px-6 py-12 md:px-12 ">
+  <div class="h-10 "></div>
+  <section id="produktif" class="px-6 py-12 md:px-12">
     <h1 class="text-3xl md:text-4xl xl:text-5xl font-bold tracking-tight mb-8">Kategori</h1>
     <div class="grid grid-cols-2 max-[500px]:grid-cols-1 lg:grid-cols-3 gap-x-10 gap-y-8">
         <?php 
@@ -22,7 +48,7 @@
     </div>
 </section>
   <div class="divider"></div>
-  <section class="px-6 pb-12 md:px-12">
+  <section id="populer" class="px-6 pb-12 md:px-12">
     <h1 class="text-3xl md:text-4xl xl:text-5xl font-bold tracking-tight text-center mb-4">Tools Populer</h1>
     <p class="text-1lg md:text-2lg xl:text-3lg text-inherit font-regular text-center tracking-tight mb-8">Temukan pengetahuan baru dari tools populer</p>
     <div class="grid grid-cols-2 max-[600px]:grid-cols-1 xl:grid-cols-4 gap-x-10 gap-y-8">
@@ -44,16 +70,6 @@
             </figure>
             <div class="card-body items-center text-center">
                 <h2 class="card-title"><?= $v['nama'] ?></h2>
-                <style>
-                .lc-2 {
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                    display: -webkit-box;
-                    -webkit-box-orient: vertical;
-                    -webkit-line-clamp: 2 !important;
-                    max-height: 50px;
-                }   
-                </style>
                 <p class="mb-0 lc-2"><?= $v['deskripsi'] ?></p>
                 <span class="bg-green-100 text-green-800 text-md font-medium mr-2 px-2.5 py-0.5 rounded-full"><?= $kategori_produktif_populer ?></span>
                 <div class="divider"></div>
