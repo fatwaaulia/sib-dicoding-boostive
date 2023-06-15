@@ -1,4 +1,4 @@
-![image](https://github.com/fatwaaulia/sib-dicoding-boostive/assets/77380125/38511190-c331-42ba-acf9-1c84b2a53694)# Boostive
+# Boostive
 http://fatwaaulia.com/
 
 ## Apa Itu Boostive?
