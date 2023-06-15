@@ -1,4 +1,4 @@
-# Boostive
+![image](https://github.com/fatwaaulia/sib-dicoding-boostive/assets/77380125/38511190-c331-42ba-acf9-1c84b2a53694)# Boostive
 http://fatwaaulia.com/
 
 ## Apa Itu Boostive?
@@ -25,15 +25,21 @@ Boostive mendorong pengguna untuk berkontribusi dengan menyajikan data di dalam 
 Boostive dibuat untuk memenuhi tugas akhir kami yang sedang menjalankan Studi Independen Cycle 4 di Dicoding.
 Kode Tim Kami adalah C23-M405
 
-## Plugins Yang Digunakan
-
 ### Frontend
-1. Tailwind untuk landing page
-2. Boostrap untuk dashboard superadmin
+1. HTML, CSS, dan Javascript
+2. Boostrap 5 (Dashboard Superadmin)
+3. Tailwind CSS (Landing Page)
 
 ### Backend
-1. Codeigniter 4
+1. MySql
+2. PHP (Framework Codeigniter 4)
 
 ### UI/UX
 1. Figma
-2. DaisyUI
+2. Canva
+
+### Library Lainnya
+1. daisyUI
+2. SweetAlert2
+3. DataTables
+
