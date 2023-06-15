@@ -45,7 +45,7 @@
 </div>
 <div class="container py-4">
     <div class="row">
-        <div class="offset-xxl-3 col-xxl-6 col-lg-4 col-md-6">
+        <div class="offset-xxl-3 col-xxl-6 offset-lg-4 col-lg-4 offset-md-3 col-md-6">
             <div class="card">
                 <div class="card-body">
                     <div class="text-center">
