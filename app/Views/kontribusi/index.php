@@ -37,12 +37,13 @@
                                 </a>
                             </td>
                             <td><?= $v['nama_kontributor'] . '<br>' . $v['email_kontributor'] ?></td>
-                            <td><?= $v['status'] ?></td>
+                            <td class="<?php if ($v['status'] == 'Ditolak') echo 'text-danger' ?>"><?= $v['status'] ?></td>
                             <td>
                                 <?= date('d-m-Y', strtotime($v['created_at'])) ?> <br>
                                 <?= date('H:i:s', strtotime($v['created_at'])) ?>
                             </td>
                             <td>
+                                <?php if ($v['status'] != 'Ditolak') : ?>
                                 <a href="#" data-bs-toggle="modal" data-bs-target="#periksa_pengajuan_kontribusi<?= model('Env')->encode($v['id']) ?>">
                                     <i class="fa-regular fa-pen-to-square fa-lg"></i>
                                 </a>
@@ -127,6 +128,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                <?php endif; ?>
                             </td>
                         </tr>
                         <?php endforeach; ?>
