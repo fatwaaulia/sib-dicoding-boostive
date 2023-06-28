@@ -43,7 +43,6 @@
                                 <?= date('H:i:s', strtotime($v['created_at'])) ?>
                             </td>
                             <td>
-                                <?php if ($v['status'] != 'Ditolak') : ?>
                                 <a href="#" data-bs-toggle="modal" data-bs-target="#periksa_pengajuan_kontribusi<?= model('Env')->encode($v['id']) ?>">
                                     <i class="fa-regular fa-pen-to-square fa-lg"></i>
                                 </a>
@@ -90,7 +89,7 @@
                                                 <?= csrf_field(); ?>
                                                 <div class="mb-3">
                                                     <label for="status" class="form-label">Status</label>
-                                                    <select class="form-select <?= validation_show_error('status') ? 'is-invalid' : '' ?>" id="status" name="status">
+                                                    <select class="form-select <?= validation_show_error('status') ? 'is-invalid' : '' ?>" id="status" name="status" <?= ($v['status'] == 'Ditolak') ? 'disabled' : '' ?>>
                                                         <?php
                                                         $status = ['Diproses', 'Diterima', 'Ditolak'];
                                                         foreach ($status as $v_status) : 
@@ -117,7 +116,7 @@
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="status" class="form-label">Gambar Kegiatan</label>
-                                                    <input type="file" class="form-control mb-1" name="img" accept="image/*">
+                                                    <input type="file" class="form-control mb-1" name="img" accept="image/*" <?= ($v['status'] == 'Ditolak') ? 'disabled' : '' ?>>
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
@@ -128,7 +127,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <?php endif; ?>
                             </td>
                         </tr>
                         <?php endforeach; ?>
